@@ -1,0 +1,18 @@
+chunk 1/12 -- 100,000 ordenes procesadas
+chunk 2/12 -- 200,000 ordenes procesadas
+chunk 3/12 -- 300,000 ordenes procesadas
+chunk 4/12 -- 400,000 ordenes procesadas
+chunk 5/12 -- 500,000 ordenes procesadas
+chunk 6/12 -- 600,000 ordenes procesadas
+chunk 7/12 -- 700,000 ordenes procesadas
+chunk 8/12 -- 800,000 ordenes procesadas
+chunk 9/12 -- 900,000 ordenes procesadas
+chunk 10/12 -- 1,000,000 ordenes procesadas
+chunk 11/12 -- 1,100,000 ordenes procesadas
+chunk 12/12 -- 1,200,000 ordenes procesadas
+
+Listo: eventos_hotsale.jsonl
+Eventos unicos: 3,035,188
+Duplicados inyectados: 91,562 (3.02%)
+Por tipo: {'order_placed': 1200000, 'payment_confirmed': 1019598, 'inventory_reserved': 815590}
+Total de lineas en el archivo (unicos + duplicados): 3,126,750
