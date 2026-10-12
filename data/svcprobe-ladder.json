@@ -1,0 +1,1604 @@
+{
+  "machine": "AMD Ryzen 5 5600G (6c/12t), 7.7 GiB RAM, WSL2 Ubuntu 24.04",
+  "base_url": "http://localhost:8090",
+  "measured_seconds_per_step": 15,
+  "settle_seconds_per_step": 2,
+  "runs": 5,
+  "request_timeout_seconds": 5,
+  "steps": [
+    {
+      "run": 1,
+      "target_rate_per_second": 12,
+      "sent": 204,
+      "service_counted": 204,
+      "max_launch_lateness_ms": 1.65927,
+      "measured_after_settling": 180,
+      "ok": 180,
+      "overloaded_503": 0,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 0,
+      "ok_per_second": 12,
+      "max_in_flight": 1,
+      "ok_latency_ms": {
+        "n": 180,
+        "min": 11.941354,
+        "p50": 23.155221,
+        "p95": 31.163696,
+        "p99": 31.812951,
+        "max": 31.880903
+      },
+      "overloaded_503_latency_ms": {
+        "n": 0,
+        "min": 0,
+        "p50": 0,
+        "p95": 0,
+        "p99": 0,
+        "max": 0
+      }
+    },
+    {
+      "run": 1,
+      "target_rate_per_second": 30,
+      "sent": 510,
+      "service_counted": 510,
+      "max_launch_lateness_ms": 1.583135,
+      "measured_after_settling": 450,
+      "ok": 450,
+      "overloaded_503": 0,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 0,
+      "ok_per_second": 30,
+      "max_in_flight": 1,
+      "ok_latency_ms": {
+        "n": 450,
+        "min": 11.963188,
+        "p50": 21.906747,
+        "p95": 30.4603,
+        "p99": 31.818224,
+        "max": 32.044556
+      },
+      "overloaded_503_latency_ms": {
+        "n": 0,
+        "min": 0,
+        "p50": 0,
+        "p95": 0,
+        "p99": 0,
+        "max": 0
+      }
+    },
+    {
+      "run": 1,
+      "target_rate_per_second": 60,
+      "sent": 1020,
+      "service_counted": 1020,
+      "max_launch_lateness_ms": 1.74423,
+      "measured_after_settling": 900,
+      "ok": 832,
+      "overloaded_503": 68,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 7.555555555555555,
+      "ok_per_second": 55.46666666666667,
+      "max_in_flight": 12,
+      "ok_latency_ms": {
+        "n": 832,
+        "min": 11.756848,
+        "p50": 30.097019,
+        "p95": 205.2459,
+        "p99": 205.5248,
+        "max": 206.10201
+      },
+      "overloaded_503_latency_ms": {
+        "n": 68,
+        "min": 204.470904,
+        "p50": 204.973374,
+        "p95": 205.363333,
+        "p99": 205.429536,
+        "max": 205.429536
+      }
+    },
+    {
+      "run": 1,
+      "target_rate_per_second": 90,
+      "sent": 1530,
+      "service_counted": 1530,
+      "max_launch_lateness_ms": 1.816829,
+      "measured_after_settling": 1350,
+      "ok": 1094,
+      "overloaded_503": 256,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 18.962962962962962,
+      "ok_per_second": 72.93333333333334,
+      "max_in_flight": 28,
+      "ok_latency_ms": {
+        "n": 1094,
+        "min": 296.075527,
+        "p50": 299.193527,
+        "p95": 299.952691,
+        "p99": 300.239279,
+        "max": 301.054537
+      },
+      "overloaded_503_latency_ms": {
+        "n": 256,
+        "min": 296.006692,
+        "p50": 299.176295,
+        "p95": 299.917675,
+        "p99": 300.466728,
+        "max": 300.61771
+      }
+    },
+    {
+      "run": 1,
+      "target_rate_per_second": 116,
+      "sent": 1972,
+      "service_counted": 1972,
+      "max_launch_lateness_ms": 1.456522,
+      "measured_after_settling": 1740,
+      "ok": 1370,
+      "overloaded_503": 370,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 21.264367816091955,
+      "ok_per_second": 91.33333333333333,
+      "max_in_flight": 45,
+      "ok_latency_ms": {
+        "n": 1370,
+        "min": 378.006378,
+        "p50": 381.074889,
+        "p95": 382.171939,
+        "p99": 382.644456,
+        "max": 383.584585
+      },
+      "overloaded_503_latency_ms": {
+        "n": 370,
+        "min": 378.101071,
+        "p50": 381.191883,
+        "p95": 382.139883,
+        "p99": 382.717185,
+        "max": 383.345744
+      }
+    },
+    {
+      "run": 1,
+      "target_rate_per_second": 180,
+      "sent": 3060,
+      "service_counted": 3060,
+      "max_launch_lateness_ms": 1.602519,
+      "measured_after_settling": 2700,
+      "ok": 1871,
+      "overloaded_503": 829,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 30.703703703703702,
+      "ok_per_second": 124.73333333333333,
+      "max_in_flight": 107,
+      "ok_latency_ms": {
+        "n": 1871,
+        "min": 579.751664,
+        "p50": 581.68028,
+        "p95": 584.265571,
+        "p99": 585.077552,
+        "max": 590.182419
+      },
+      "overloaded_503_latency_ms": {
+        "n": 829,
+        "min": 579.79584,
+        "p50": 583.160115,
+        "p95": 584.237791,
+        "p99": 584.720327,
+        "max": 594.716892
+      }
+    },
+    {
+      "run": 1,
+      "target_rate_per_second": 250,
+      "sent": 4250,
+      "service_counted": 4250,
+      "max_launch_lateness_ms": 1.529085,
+      "measured_after_settling": 3750,
+      "ok": 1672,
+      "overloaded_503": 2078,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 55.413333333333334,
+      "ok_per_second": 111.46666666666667,
+      "max_in_flight": 208,
+      "ok_latency_ms": {
+        "n": 1672,
+        "min": 798.857357,
+        "p50": 802.569396,
+        "p95": 1864.300129,
+        "p99": 1969.925558,
+        "max": 2000.59322
+      },
+      "overloaded_503_latency_ms": {
+        "n": 2078,
+        "min": 20.863148,
+        "p50": 22.259898,
+        "p95": 802.946926,
+        "p99": 804.692592,
+        "max": 815.88824
+      }
+    },
+    {
+      "run": 1,
+      "target_rate_per_second": 400,
+      "sent": 6800,
+      "service_counted": 6800,
+      "max_launch_lateness_ms": 1.84569,
+      "measured_after_settling": 6000,
+      "ok": 1798,
+      "overloaded_503": 4202,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 70.03333333333333,
+      "ok_per_second": 119.86666666666666,
+      "max_in_flight": 217,
+      "ok_latency_ms": {
+        "n": 1798,
+        "min": 1001.608585,
+        "p50": 1504.348534,
+        "p95": 1948.942618,
+        "p99": 1994.904088,
+        "max": 2001.523435
+      },
+      "overloaded_503_latency_ms": {
+        "n": 4202,
+        "min": 20.675618,
+        "p50": 21.715191,
+        "p95": 22.561752,
+        "p99": 23.14453,
+        "max": 29.258538
+      }
+    },
+    {
+      "run": 2,
+      "target_rate_per_second": 12,
+      "sent": 204,
+      "service_counted": 204,
+      "max_launch_lateness_ms": 1.281819,
+      "measured_after_settling": 180,
+      "ok": 180,
+      "overloaded_503": 0,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 0,
+      "ok_per_second": 12,
+      "max_in_flight": 1,
+      "ok_latency_ms": {
+        "n": 180,
+        "min": 11.970828,
+        "p50": 21.181417,
+        "p95": 31.289612,
+        "p99": 32.431149,
+        "max": 32.568427
+      },
+      "overloaded_503_latency_ms": {
+        "n": 0,
+        "min": 0,
+        "p50": 0,
+        "p95": 0,
+        "p99": 0,
+        "max": 0
+      }
+    },
+    {
+      "run": 2,
+      "target_rate_per_second": 30,
+      "sent": 510,
+      "service_counted": 510,
+      "max_launch_lateness_ms": 1.176306,
+      "measured_after_settling": 450,
+      "ok": 450,
+      "overloaded_503": 0,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 0,
+      "ok_per_second": 30,
+      "max_in_flight": 1,
+      "ok_latency_ms": {
+        "n": 450,
+        "min": 11.637958,
+        "p50": 21.789965,
+        "p95": 30.800415,
+        "p99": 31.902258,
+        "max": 32.260675
+      },
+      "overloaded_503_latency_ms": {
+        "n": 0,
+        "min": 0,
+        "p50": 0,
+        "p95": 0,
+        "p99": 0,
+        "max": 0
+      }
+    },
+    {
+      "run": 2,
+      "target_rate_per_second": 60,
+      "sent": 1020,
+      "service_counted": 1020,
+      "max_launch_lateness_ms": 3.209143,
+      "measured_after_settling": 900,
+      "ok": 826,
+      "overloaded_503": 74,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 8.222222222222221,
+      "ok_per_second": 55.06666666666667,
+      "max_in_flight": 12,
+      "ok_latency_ms": {
+        "n": 826,
+        "min": 11.823794,
+        "p50": 30.784112,
+        "p95": 205.542472,
+        "p99": 205.912496,
+        "max": 206.583781
+      },
+      "overloaded_503_latency_ms": {
+        "n": 74,
+        "min": 204.46214,
+        "p50": 205.112662,
+        "p95": 205.716821,
+        "p99": 205.89994,
+        "max": 205.89994
+      }
+    },
+    {
+      "run": 2,
+      "target_rate_per_second": 90,
+      "sent": 1530,
+      "service_counted": 1530,
+      "max_launch_lateness_ms": 1.39461,
+      "measured_after_settling": 1350,
+      "ok": 1082,
+      "overloaded_503": 268,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 19.85185185185185,
+      "ok_per_second": 72.13333333333334,
+      "max_in_flight": 28,
+      "ok_latency_ms": {
+        "n": 1082,
+        "min": 295.82286,
+        "p50": 298.46125,
+        "p95": 300.116827,
+        "p99": 300.569958,
+        "max": 302.221609
+      },
+      "overloaded_503_latency_ms": {
+        "n": 268,
+        "min": 295.918544,
+        "p50": 297.600566,
+        "p95": 299.997166,
+        "p99": 300.23652,
+        "max": 300.744145
+      }
+    },
+    {
+      "run": 2,
+      "target_rate_per_second": 116,
+      "sent": 1972,
+      "service_counted": 1972,
+      "max_launch_lateness_ms": 1.594946,
+      "measured_after_settling": 1740,
+      "ok": 1372,
+      "overloaded_503": 368,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 21.149425287356323,
+      "ok_per_second": 91.46666666666667,
+      "max_in_flight": 45,
+      "ok_latency_ms": {
+        "n": 1372,
+        "min": 378.149257,
+        "p50": 380.444495,
+        "p95": 382.200707,
+        "p99": 382.551602,
+        "max": 383.349824
+      },
+      "overloaded_503_latency_ms": {
+        "n": 368,
+        "min": 378.196754,
+        "p50": 379.428087,
+        "p95": 382.155305,
+        "p99": 382.46416,
+        "max": 382.81034
+      }
+    },
+    {
+      "run": 2,
+      "target_rate_per_second": 180,
+      "sent": 3060,
+      "service_counted": 3060,
+      "max_launch_lateness_ms": 1.619768,
+      "measured_after_settling": 2700,
+      "ok": 1861,
+      "overloaded_503": 839,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 31.074074074074073,
+      "ok_per_second": 124.06666666666666,
+      "max_in_flight": 106,
+      "ok_latency_ms": {
+        "n": 1861,
+        "min": 577.926618,
+        "p50": 581.804188,
+        "p95": 584.436655,
+        "p99": 585.034445,
+        "max": 587.679799
+      },
+      "overloaded_503_latency_ms": {
+        "n": 839,
+        "min": 580.10387,
+        "p50": 583.415346,
+        "p95": 584.464842,
+        "p99": 585.043356,
+        "max": 585.823847
+      }
+    },
+    {
+      "run": 2,
+      "target_rate_per_second": 250,
+      "sent": 4250,
+      "service_counted": 4250,
+      "max_launch_lateness_ms": 1.608631,
+      "measured_after_settling": 3750,
+      "ok": 1735,
+      "overloaded_503": 2015,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 53.733333333333334,
+      "ok_per_second": 115.66666666666667,
+      "max_in_flight": 194,
+      "ok_latency_ms": {
+        "n": 1735,
+        "min": 800.907272,
+        "p50": 802.097114,
+        "p95": 1852.224161,
+        "p99": 1975.280799,
+        "max": 2002.02018
+      },
+      "overloaded_503_latency_ms": {
+        "n": 2015,
+        "min": 20.825594,
+        "p50": 22.022826,
+        "p95": 802.260306,
+        "p99": 802.728121,
+        "max": 803.62664
+      }
+    },
+    {
+      "run": 2,
+      "target_rate_per_second": 400,
+      "sent": 6800,
+      "service_counted": 6800,
+      "max_launch_lateness_ms": 8.099106,
+      "measured_after_settling": 6000,
+      "ok": 1829,
+      "overloaded_503": 4171,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 69.51666666666667,
+      "ok_per_second": 121.93333333333334,
+      "max_in_flight": 212,
+      "ok_latency_ms": {
+        "n": 1829,
+        "min": 1001.850257,
+        "p50": 1516.708998,
+        "p95": 1966.243274,
+        "p99": 1996.667768,
+        "max": 2001.932994
+      },
+      "overloaded_503_latency_ms": {
+        "n": 4171,
+        "min": 20.748239,
+        "p50": 21.807368,
+        "p95": 23.288518,
+        "p99": 31.320055,
+        "max": 1259.752572
+      }
+    },
+    {
+      "run": 3,
+      "target_rate_per_second": 12,
+      "sent": 204,
+      "service_counted": 204,
+      "max_launch_lateness_ms": 1.18726,
+      "measured_after_settling": 180,
+      "ok": 180,
+      "overloaded_503": 0,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 0,
+      "ok_per_second": 12,
+      "max_in_flight": 1,
+      "ok_latency_ms": {
+        "n": 180,
+        "min": 11.666729,
+        "p50": 22.197583,
+        "p95": 31.409577,
+        "p99": 34.345477,
+        "max": 45.514221
+      },
+      "overloaded_503_latency_ms": {
+        "n": 0,
+        "min": 0,
+        "p50": 0,
+        "p95": 0,
+        "p99": 0,
+        "max": 0
+      }
+    },
+    {
+      "run": 3,
+      "target_rate_per_second": 30,
+      "sent": 510,
+      "service_counted": 510,
+      "max_launch_lateness_ms": 1.718847,
+      "measured_after_settling": 450,
+      "ok": 450,
+      "overloaded_503": 0,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 0,
+      "ok_per_second": 30,
+      "max_in_flight": 2,
+      "ok_latency_ms": {
+        "n": 450,
+        "min": 11.971037,
+        "p50": 21.788445,
+        "p95": 31.241042,
+        "p99": 32.04875,
+        "max": 37.80986
+      },
+      "overloaded_503_latency_ms": {
+        "n": 0,
+        "min": 0,
+        "p50": 0,
+        "p95": 0,
+        "p99": 0,
+        "max": 0
+      }
+    },
+    {
+      "run": 3,
+      "target_rate_per_second": 60,
+      "sent": 1020,
+      "service_counted": 1020,
+      "max_launch_lateness_ms": 1.317136,
+      "measured_after_settling": 900,
+      "ok": 813,
+      "overloaded_503": 87,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 9.666666666666666,
+      "ok_per_second": 54.2,
+      "max_in_flight": 12,
+      "ok_latency_ms": {
+        "n": 813,
+        "min": 11.679538,
+        "p50": 30.387498,
+        "p95": 205.385475,
+        "p99": 205.758397,
+        "max": 206.279899
+      },
+      "overloaded_503_latency_ms": {
+        "n": 87,
+        "min": 204.282846,
+        "p50": 204.893152,
+        "p95": 205.717572,
+        "p99": 206.136054,
+        "max": 206.136054
+      }
+    },
+    {
+      "run": 3,
+      "target_rate_per_second": 90,
+      "sent": 1530,
+      "service_counted": 1530,
+      "max_launch_lateness_ms": 1.460362,
+      "measured_after_settling": 1350,
+      "ok": 1100,
+      "overloaded_503": 250,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 18.51851851851852,
+      "ok_per_second": 73.33333333333333,
+      "max_in_flight": 28,
+      "ok_latency_ms": {
+        "n": 1100,
+        "min": 295.962519,
+        "p50": 297.706139,
+        "p95": 299.991342,
+        "p99": 300.303498,
+        "max": 302.905999
+      },
+      "overloaded_503_latency_ms": {
+        "n": 250,
+        "min": 296.024234,
+        "p50": 299.228026,
+        "p95": 300.022801,
+        "p99": 300.224741,
+        "max": 303.84584
+      }
+    },
+    {
+      "run": 3,
+      "target_rate_per_second": 116,
+      "sent": 1972,
+      "service_counted": 1972,
+      "max_launch_lateness_ms": 4.789725,
+      "measured_after_settling": 1740,
+      "ok": 1372,
+      "overloaded_503": 368,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 21.149425287356323,
+      "ok_per_second": 91.46666666666667,
+      "max_in_flight": 45,
+      "ok_latency_ms": {
+        "n": 1372,
+        "min": 378.080172,
+        "p50": 381.199747,
+        "p95": 382.226933,
+        "p99": 382.711859,
+        "max": 386.852542
+      },
+      "overloaded_503_latency_ms": {
+        "n": 368,
+        "min": 378.298575,
+        "p50": 381.307532,
+        "p95": 382.233252,
+        "p99": 382.819279,
+        "max": 384.645727
+      }
+    },
+    {
+      "run": 3,
+      "target_rate_per_second": 180,
+      "sent": 3060,
+      "service_counted": 3060,
+      "max_launch_lateness_ms": 3.30599,
+      "measured_after_settling": 2700,
+      "ok": 1891,
+      "overloaded_503": 809,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 29.962962962962962,
+      "ok_per_second": 126.06666666666666,
+      "max_in_flight": 106,
+      "ok_latency_ms": {
+        "n": 1891,
+        "min": 580.041459,
+        "p50": 581.756158,
+        "p95": 584.595954,
+        "p99": 585.148571,
+        "max": 585.711974
+      },
+      "overloaded_503_latency_ms": {
+        "n": 809,
+        "min": 580.114623,
+        "p50": 583.400519,
+        "p95": 584.468412,
+        "p99": 585.22657,
+        "max": 586.607436
+      }
+    },
+    {
+      "run": 3,
+      "target_rate_per_second": 250,
+      "sent": 4250,
+      "service_counted": 4250,
+      "max_launch_lateness_ms": 15.336531,
+      "measured_after_settling": 3750,
+      "ok": 1697,
+      "overloaded_503": 2053,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 54.74666666666667,
+      "ok_per_second": 113.13333333333334,
+      "max_in_flight": 202,
+      "ok_latency_ms": {
+        "n": 1697,
+        "min": 787.439831,
+        "p50": 802.305792,
+        "p95": 1853.108811,
+        "p99": 1979.909898,
+        "max": 2000.162942
+      },
+      "overloaded_503_latency_ms": {
+        "n": 2053,
+        "min": 20.849091,
+        "p50": 22.221718,
+        "p95": 802.612168,
+        "p99": 803.613574,
+        "max": 832.780017
+      }
+    },
+    {
+      "run": 3,
+      "target_rate_per_second": 400,
+      "sent": 6800,
+      "service_counted": 6800,
+      "max_launch_lateness_ms": 3.559459,
+      "measured_after_settling": 6000,
+      "ok": 1828,
+      "overloaded_503": 4172,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 69.53333333333333,
+      "ok_per_second": 121.86666666666666,
+      "max_in_flight": 220,
+      "ok_latency_ms": {
+        "n": 1828,
+        "min": 1001.816958,
+        "p50": 1514.563922,
+        "p95": 1950.115356,
+        "p99": 1991.863786,
+        "max": 2001.432522
+      },
+      "overloaded_503_latency_ms": {
+        "n": 4172,
+        "min": 20.668441,
+        "p50": 21.626762,
+        "p95": 22.412365,
+        "p99": 22.823317,
+        "max": 29.577676
+      }
+    },
+    {
+      "run": 4,
+      "target_rate_per_second": 12,
+      "sent": 204,
+      "service_counted": 204,
+      "max_launch_lateness_ms": 1.178249,
+      "measured_after_settling": 180,
+      "ok": 180,
+      "overloaded_503": 0,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 0,
+      "ok_per_second": 12,
+      "max_in_flight": 1,
+      "ok_latency_ms": {
+        "n": 180,
+        "min": 11.826849,
+        "p50": 22.6759,
+        "p95": 31.511972,
+        "p99": 32.396625,
+        "max": 32.862267
+      },
+      "overloaded_503_latency_ms": {
+        "n": 0,
+        "min": 0,
+        "p50": 0,
+        "p95": 0,
+        "p99": 0,
+        "max": 0
+      }
+    },
+    {
+      "run": 4,
+      "target_rate_per_second": 30,
+      "sent": 510,
+      "service_counted": 510,
+      "max_launch_lateness_ms": 1.648638,
+      "measured_after_settling": 450,
+      "ok": 450,
+      "overloaded_503": 0,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 0,
+      "ok_per_second": 30,
+      "max_in_flight": 1,
+      "ok_latency_ms": {
+        "n": 450,
+        "min": 12.010017,
+        "p50": 22.139718,
+        "p95": 31.102998,
+        "p99": 32.049121,
+        "max": 32.510684
+      },
+      "overloaded_503_latency_ms": {
+        "n": 0,
+        "min": 0,
+        "p50": 0,
+        "p95": 0,
+        "p99": 0,
+        "max": 0
+      }
+    },
+    {
+      "run": 4,
+      "target_rate_per_second": 60,
+      "sent": 1020,
+      "service_counted": 1020,
+      "max_launch_lateness_ms": 1.43866,
+      "measured_after_settling": 900,
+      "ok": 839,
+      "overloaded_503": 61,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 6.777777777777778,
+      "ok_per_second": 55.93333333333333,
+      "max_in_flight": 13,
+      "ok_latency_ms": {
+        "n": 839,
+        "min": 11.538809,
+        "p50": 30.329078,
+        "p95": 205.205684,
+        "p99": 205.443472,
+        "max": 206.261967
+      },
+      "overloaded_503_latency_ms": {
+        "n": 61,
+        "min": 204.358663,
+        "p50": 204.81496,
+        "p95": 205.333079,
+        "p99": 205.638267,
+        "max": 205.638267
+      }
+    },
+    {
+      "run": 4,
+      "target_rate_per_second": 90,
+      "sent": 1530,
+      "service_counted": 1530,
+      "max_launch_lateness_ms": 1.446735,
+      "measured_after_settling": 1350,
+      "ok": 1089,
+      "overloaded_503": 261,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 19.333333333333332,
+      "ok_per_second": 72.6,
+      "max_in_flight": 28,
+      "ok_latency_ms": {
+        "n": 1089,
+        "min": 295.952582,
+        "p50": 297.292457,
+        "p95": 299.827994,
+        "p99": 300.081715,
+        "max": 300.652133
+      },
+      "overloaded_503_latency_ms": {
+        "n": 261,
+        "min": 295.967249,
+        "p50": 296.914801,
+        "p95": 299.733318,
+        "p99": 299.981606,
+        "max": 300.010224
+      }
+    },
+    {
+      "run": 4,
+      "target_rate_per_second": 116,
+      "sent": 1972,
+      "service_counted": 1972,
+      "max_launch_lateness_ms": 1.730391,
+      "measured_after_settling": 1740,
+      "ok": 1350,
+      "overloaded_503": 390,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 22.413793103448278,
+      "ok_per_second": 90,
+      "max_in_flight": 46,
+      "ok_latency_ms": {
+        "n": 1350,
+        "min": 378.077237,
+        "p50": 380.909566,
+        "p95": 382.226477,
+        "p99": 382.983343,
+        "max": 391.11544
+      },
+      "overloaded_503_latency_ms": {
+        "n": 390,
+        "min": 378.045862,
+        "p50": 380.029238,
+        "p95": 382.237613,
+        "p99": 383.425785,
+        "max": 387.145141
+      }
+    },
+    {
+      "run": 4,
+      "target_rate_per_second": 180,
+      "sent": 3060,
+      "service_counted": 3060,
+      "max_launch_lateness_ms": 1.65126,
+      "measured_after_settling": 2700,
+      "ok": 1854,
+      "overloaded_503": 846,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 31.333333333333332,
+      "ok_per_second": 123.6,
+      "max_in_flight": 106,
+      "ok_latency_ms": {
+        "n": 1854,
+        "min": 579.902067,
+        "p50": 581.621122,
+        "p95": 584.172296,
+        "p99": 584.799176,
+        "max": 585.386844
+      },
+      "overloaded_503_latency_ms": {
+        "n": 846,
+        "min": 579.905727,
+        "p50": 581.545717,
+        "p95": 584.119375,
+        "p99": 584.714926,
+        "max": 585.118155
+      }
+    },
+    {
+      "run": 4,
+      "target_rate_per_second": 250,
+      "sent": 4250,
+      "service_counted": 4250,
+      "max_launch_lateness_ms": 1.913671,
+      "measured_after_settling": 3750,
+      "ok": 1687,
+      "overloaded_503": 2063,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 55.013333333333335,
+      "ok_per_second": 112.46666666666667,
+      "max_in_flight": 188,
+      "ok_latency_ms": {
+        "n": 1687,
+        "min": 801.082997,
+        "p50": 802.169658,
+        "p95": 1865.881368,
+        "p99": 1972.108533,
+        "max": 1999.103647
+      },
+      "overloaded_503_latency_ms": {
+        "n": 2063,
+        "min": 21.007599,
+        "p50": 22.132613,
+        "p95": 802.357052,
+        "p99": 802.963415,
+        "max": 804.261693
+      }
+    },
+    {
+      "run": 4,
+      "target_rate_per_second": 400,
+      "sent": 6800,
+      "service_counted": 6800,
+      "max_launch_lateness_ms": 1.497608,
+      "measured_after_settling": 6000,
+      "ok": 1776,
+      "overloaded_503": 4224,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 70.4,
+      "ok_per_second": 118.4,
+      "max_in_flight": 210,
+      "ok_latency_ms": {
+        "n": 1776,
+        "min": 1001.814429,
+        "p50": 1489.428722,
+        "p95": 1953.130086,
+        "p99": 1997.3034,
+        "max": 2001.70818
+      },
+      "overloaded_503_latency_ms": {
+        "n": 4224,
+        "min": 20.696318,
+        "p50": 21.685288,
+        "p95": 22.47896,
+        "p99": 22.965145,
+        "max": 38.427694
+      }
+    },
+    {
+      "run": 5,
+      "target_rate_per_second": 12,
+      "sent": 204,
+      "service_counted": 204,
+      "max_launch_lateness_ms": 1.277159,
+      "measured_after_settling": 180,
+      "ok": 180,
+      "overloaded_503": 0,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 0,
+      "ok_per_second": 12,
+      "max_in_flight": 1,
+      "ok_latency_ms": {
+        "n": 180,
+        "min": 12.113794,
+        "p50": 21.763927,
+        "p95": 30.639842,
+        "p99": 31.89628,
+        "max": 32.230132
+      },
+      "overloaded_503_latency_ms": {
+        "n": 0,
+        "min": 0,
+        "p50": 0,
+        "p95": 0,
+        "p99": 0,
+        "max": 0
+      }
+    },
+    {
+      "run": 5,
+      "target_rate_per_second": 30,
+      "sent": 510,
+      "service_counted": 510,
+      "max_launch_lateness_ms": 1.348412,
+      "measured_after_settling": 450,
+      "ok": 450,
+      "overloaded_503": 0,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 0,
+      "ok_per_second": 30,
+      "max_in_flight": 1,
+      "ok_latency_ms": {
+        "n": 450,
+        "min": 11.817968,
+        "p50": 21.521833,
+        "p95": 31.233539,
+        "p99": 32.12483,
+        "max": 32.319225
+      },
+      "overloaded_503_latency_ms": {
+        "n": 0,
+        "min": 0,
+        "p50": 0,
+        "p95": 0,
+        "p99": 0,
+        "max": 0
+      }
+    },
+    {
+      "run": 5,
+      "target_rate_per_second": 60,
+      "sent": 1020,
+      "service_counted": 1020,
+      "max_launch_lateness_ms": 1.478549,
+      "measured_after_settling": 900,
+      "ok": 823,
+      "overloaded_503": 77,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 8.555555555555555,
+      "ok_per_second": 54.86666666666667,
+      "max_in_flight": 12,
+      "ok_latency_ms": {
+        "n": 823,
+        "min": 11.963442,
+        "p50": 30.308092,
+        "p95": 205.525333,
+        "p99": 205.824984,
+        "max": 206.306376
+      },
+      "overloaded_503_latency_ms": {
+        "n": 77,
+        "min": 204.573861,
+        "p50": 205.165663,
+        "p95": 205.720353,
+        "p99": 206.257589,
+        "max": 206.257589
+      }
+    },
+    {
+      "run": 5,
+      "target_rate_per_second": 90,
+      "sent": 1530,
+      "service_counted": 1530,
+      "max_launch_lateness_ms": 1.839223,
+      "measured_after_settling": 1350,
+      "ok": 1099,
+      "overloaded_503": 251,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 18.59259259259259,
+      "ok_per_second": 73.26666666666667,
+      "max_in_flight": 28,
+      "ok_latency_ms": {
+        "n": 1099,
+        "min": 296.080533,
+        "p50": 299.191462,
+        "p95": 300.067932,
+        "p99": 300.286207,
+        "max": 300.991198
+      },
+      "overloaded_503_latency_ms": {
+        "n": 251,
+        "min": 296.23244,
+        "p50": 297.169324,
+        "p95": 300.10552,
+        "p99": 300.270132,
+        "max": 300.889007
+      }
+    },
+    {
+      "run": 5,
+      "target_rate_per_second": 116,
+      "sent": 1972,
+      "service_counted": 1972,
+      "max_launch_lateness_ms": 1.684902,
+      "measured_after_settling": 1740,
+      "ok": 1338,
+      "overloaded_503": 402,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 23.103448275862068,
+      "ok_per_second": 89.2,
+      "max_in_flight": 45,
+      "ok_latency_ms": {
+        "n": 1338,
+        "min": 378.235986,
+        "p50": 379.833238,
+        "p95": 382.221408,
+        "p99": 382.75377,
+        "max": 388.227155
+      },
+      "overloaded_503_latency_ms": {
+        "n": 402,
+        "min": 378.17484,
+        "p50": 381.31424,
+        "p95": 382.359143,
+        "p99": 383.01705,
+        "max": 391.062566
+      }
+    },
+    {
+      "run": 5,
+      "target_rate_per_second": 180,
+      "sent": 3060,
+      "service_counted": 3060,
+      "max_launch_lateness_ms": 2.889216,
+      "measured_after_settling": 2700,
+      "ok": 1855,
+      "overloaded_503": 845,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 31.296296296296298,
+      "ok_per_second": 123.66666666666667,
+      "max_in_flight": 106,
+      "ok_latency_ms": {
+        "n": 1855,
+        "min": 579.948104,
+        "p50": 583.32362,
+        "p95": 584.423181,
+        "p99": 584.895347,
+        "max": 585.971349
+      },
+      "overloaded_503_latency_ms": {
+        "n": 845,
+        "min": 580.09611,
+        "p50": 583.439648,
+        "p95": 584.382835,
+        "p99": 584.880767,
+        "max": 585.446222
+      }
+    },
+    {
+      "run": 5,
+      "target_rate_per_second": 250,
+      "sent": 4250,
+      "service_counted": 4250,
+      "max_launch_lateness_ms": 1.522372,
+      "measured_after_settling": 3750,
+      "ok": 1719,
+      "overloaded_503": 2031,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 54.16,
+      "ok_per_second": 114.6,
+      "max_in_flight": 197,
+      "ok_latency_ms": {
+        "n": 1719,
+        "min": 800.977249,
+        "p50": 802.155548,
+        "p95": 1855.613683,
+        "p99": 1969.797926,
+        "max": 1998.386978
+      },
+      "overloaded_503_latency_ms": {
+        "n": 2031,
+        "min": 20.839957,
+        "p50": 22.129387,
+        "p95": 802.376171,
+        "p99": 802.884784,
+        "max": 807.398205
+      }
+    },
+    {
+      "run": 5,
+      "target_rate_per_second": 400,
+      "sent": 6800,
+      "service_counted": 6800,
+      "max_launch_lateness_ms": 2.610176,
+      "measured_after_settling": 6000,
+      "ok": 1846,
+      "overloaded_503": 4154,
+      "timeout": 0,
+      "unreachable": 0,
+      "protocol": 0,
+      "failure_pct": 69.23333333333333,
+      "ok_per_second": 123.06666666666666,
+      "max_in_flight": 215,
+      "ok_latency_ms": {
+        "n": 1846,
+        "min": 1003.75977,
+        "p50": 1495.361715,
+        "p95": 1942.047328,
+        "p99": 1992.371504,
+        "max": 2001.136958
+      },
+      "overloaded_503_latency_ms": {
+        "n": 4154,
+        "min": 20.736411,
+        "p50": 21.601142,
+        "p95": 22.307476,
+        "p99": 22.730726,
+        "max": 25.07774
+      }
+    }
+  ],
+  "summary_median_and_range_across_runs": [
+    {
+      "target_rate_per_second": 12,
+      "failure_pct": {
+        "runs_with_data": 5,
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "ok_p50_ms": {
+        "runs_with_data": 5,
+        "median": 22.197583,
+        "min": 21.181417,
+        "max": 23.155221
+      },
+      "ok_p95_ms": {
+        "runs_with_data": 5,
+        "median": 31.289612,
+        "min": 30.639842,
+        "max": 31.511972
+      },
+      "overloaded_503_p50_ms": {
+        "runs_with_data": 0,
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "ok_per_second": {
+        "runs_with_data": 5,
+        "median": 12,
+        "min": 12,
+        "max": 12
+      },
+      "max_in_flight": {
+        "runs_with_data": 5,
+        "median": 1,
+        "min": 1,
+        "max": 1
+      }
+    },
+    {
+      "target_rate_per_second": 30,
+      "failure_pct": {
+        "runs_with_data": 5,
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "ok_p50_ms": {
+        "runs_with_data": 5,
+        "median": 21.789965,
+        "min": 21.521833,
+        "max": 22.139718
+      },
+      "ok_p95_ms": {
+        "runs_with_data": 5,
+        "median": 31.102998,
+        "min": 30.4603,
+        "max": 31.241042
+      },
+      "overloaded_503_p50_ms": {
+        "runs_with_data": 0,
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "ok_per_second": {
+        "runs_with_data": 5,
+        "median": 30,
+        "min": 30,
+        "max": 30
+      },
+      "max_in_flight": {
+        "runs_with_data": 5,
+        "median": 1,
+        "min": 1,
+        "max": 2
+      }
+    },
+    {
+      "target_rate_per_second": 60,
+      "failure_pct": {
+        "runs_with_data": 5,
+        "median": 8.222222222222221,
+        "min": 6.777777777777778,
+        "max": 9.666666666666666
+      },
+      "ok_p50_ms": {
+        "runs_with_data": 5,
+        "median": 30.329078,
+        "min": 30.097019,
+        "max": 30.784112
+      },
+      "ok_p95_ms": {
+        "runs_with_data": 5,
+        "median": 205.385475,
+        "min": 205.205684,
+        "max": 205.542472
+      },
+      "overloaded_503_p50_ms": {
+        "runs_with_data": 5,
+        "median": 204.973374,
+        "min": 204.81496,
+        "max": 205.165663
+      },
+      "ok_per_second": {
+        "runs_with_data": 5,
+        "median": 55.06666666666667,
+        "min": 54.2,
+        "max": 55.93333333333333
+      },
+      "max_in_flight": {
+        "runs_with_data": 5,
+        "median": 12,
+        "min": 12,
+        "max": 13
+      }
+    },
+    {
+      "target_rate_per_second": 90,
+      "failure_pct": {
+        "runs_with_data": 5,
+        "median": 18.962962962962962,
+        "min": 18.51851851851852,
+        "max": 19.85185185185185
+      },
+      "ok_p50_ms": {
+        "runs_with_data": 5,
+        "median": 298.46125,
+        "min": 297.292457,
+        "max": 299.193527
+      },
+      "ok_p95_ms": {
+        "runs_with_data": 5,
+        "median": 299.991342,
+        "min": 299.827994,
+        "max": 300.116827
+      },
+      "overloaded_503_p50_ms": {
+        "runs_with_data": 5,
+        "median": 297.600566,
+        "min": 296.914801,
+        "max": 299.228026
+      },
+      "ok_per_second": {
+        "runs_with_data": 5,
+        "median": 72.93333333333334,
+        "min": 72.13333333333334,
+        "max": 73.33333333333333
+      },
+      "max_in_flight": {
+        "runs_with_data": 5,
+        "median": 28,
+        "min": 28,
+        "max": 28
+      }
+    },
+    {
+      "target_rate_per_second": 116,
+      "failure_pct": {
+        "runs_with_data": 5,
+        "median": 21.264367816091955,
+        "min": 21.149425287356323,
+        "max": 23.103448275862068
+      },
+      "ok_p50_ms": {
+        "runs_with_data": 5,
+        "median": 380.909566,
+        "min": 379.833238,
+        "max": 381.199747
+      },
+      "ok_p95_ms": {
+        "runs_with_data": 5,
+        "median": 382.221408,
+        "min": 382.171939,
+        "max": 382.226933
+      },
+      "overloaded_503_p50_ms": {
+        "runs_with_data": 5,
+        "median": 381.191883,
+        "min": 379.428087,
+        "max": 381.31424
+      },
+      "ok_per_second": {
+        "runs_with_data": 5,
+        "median": 91.33333333333333,
+        "min": 89.2,
+        "max": 91.46666666666667
+      },
+      "max_in_flight": {
+        "runs_with_data": 5,
+        "median": 45,
+        "min": 45,
+        "max": 46
+      }
+    },
+    {
+      "target_rate_per_second": 180,
+      "failure_pct": {
+        "runs_with_data": 5,
+        "median": 31.074074074074073,
+        "min": 29.962962962962962,
+        "max": 31.333333333333332
+      },
+      "ok_p50_ms": {
+        "runs_with_data": 5,
+        "median": 581.756158,
+        "min": 581.621122,
+        "max": 583.32362
+      },
+      "ok_p95_ms": {
+        "runs_with_data": 5,
+        "median": 584.423181,
+        "min": 584.172296,
+        "max": 584.595954
+      },
+      "overloaded_503_p50_ms": {
+        "runs_with_data": 5,
+        "median": 583.400519,
+        "min": 581.545717,
+        "max": 583.439648
+      },
+      "ok_per_second": {
+        "runs_with_data": 5,
+        "median": 124.06666666666666,
+        "min": 123.6,
+        "max": 126.06666666666666
+      },
+      "max_in_flight": {
+        "runs_with_data": 5,
+        "median": 106,
+        "min": 106,
+        "max": 107
+      }
+    },
+    {
+      "target_rate_per_second": 250,
+      "failure_pct": {
+        "runs_with_data": 5,
+        "median": 54.74666666666667,
+        "min": 53.733333333333334,
+        "max": 55.413333333333334
+      },
+      "ok_p50_ms": {
+        "runs_with_data": 5,
+        "median": 802.169658,
+        "min": 802.097114,
+        "max": 802.569396
+      },
+      "ok_p95_ms": {
+        "runs_with_data": 5,
+        "median": 1855.613683,
+        "min": 1852.224161,
+        "max": 1865.881368
+      },
+      "overloaded_503_p50_ms": {
+        "runs_with_data": 5,
+        "median": 22.132613,
+        "min": 22.022826,
+        "max": 22.259898
+      },
+      "ok_per_second": {
+        "runs_with_data": 5,
+        "median": 113.13333333333334,
+        "min": 111.46666666666667,
+        "max": 115.66666666666667
+      },
+      "max_in_flight": {
+        "runs_with_data": 5,
+        "median": 197,
+        "min": 188,
+        "max": 208
+      }
+    },
+    {
+      "target_rate_per_second": 400,
+      "failure_pct": {
+        "runs_with_data": 5,
+        "median": 69.53333333333333,
+        "min": 69.23333333333333,
+        "max": 70.4
+      },
+      "ok_p50_ms": {
+        "runs_with_data": 5,
+        "median": 1504.348534,
+        "min": 1489.428722,
+        "max": 1516.708998
+      },
+      "ok_p95_ms": {
+        "runs_with_data": 5,
+        "median": 1950.115356,
+        "min": 1942.047328,
+        "max": 1966.243274
+      },
+      "overloaded_503_p50_ms": {
+        "runs_with_data": 5,
+        "median": 21.685288,
+        "min": 21.601142,
+        "max": 21.807368
+      },
+      "ok_per_second": {
+        "runs_with_data": 5,
+        "median": 121.86666666666666,
+        "min": 118.4,
+        "max": 123.06666666666666
+      },
+      "max_in_flight": {
+        "runs_with_data": 5,
+        "median": 215,
+        "min": 210,
+        "max": 220
+      }
+    }
+  ]
+}
