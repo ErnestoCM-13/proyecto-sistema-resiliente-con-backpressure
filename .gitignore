@@ -1,0 +1,7 @@
+data/*.jsonl
+
+.venv/
+
+/bin/
+
+.env
