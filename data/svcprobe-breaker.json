@@ -1,0 +1,2574 @@
+{
+  "machine": "AMD Ryzen 5 5600G (6c/12t), 7.7 GiB RAM, WSL2 Ubuntu 24.04",
+  "base_url": "http://localhost:8090",
+  "check_timeout_ms": 100,
+  "consecutive_failures_that_open": 5,
+  "cooldown_seconds": 2,
+  "half_open_trials": 3,
+  "seconds_per_step": 15,
+  "runs": 5,
+  "steps": [
+    {
+      "run": 1,
+      "workers": 1,
+      "calls_let_through": 683,
+      "service_counted": 683,
+      "let_through_but_never_counted_by_the_service": 0,
+      "ok": 683,
+      "overloaded_503": 0,
+      "timeout": 0,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 0,
+      "failure_pct_of_calls_let_through": 0,
+      "calls_per_second": 45.53333333333333,
+      "ok_per_second": 45.53333333333333,
+      "times_opened": 0,
+      "seconds_open": 0,
+      "ok_latency_ms": {
+        "n": 683,
+        "min": 11.249204,
+        "p50": 21.846714,
+        "p95": 30.78598,
+        "p99": 35.568632,
+        "max": 41.402616
+      },
+      "transitions": null
+    },
+    {
+      "run": 1,
+      "workers": 2,
+      "calls_let_through": 338,
+      "service_counted": 338,
+      "let_through_but_never_counted_by_the_service": 0,
+      "ok": 308,
+      "overloaded_503": 0,
+      "timeout": 30,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 49,
+      "failure_pct_of_calls_let_through": 8.875739644970414,
+      "calls_per_second": 22.533333333333335,
+      "ok_per_second": 20.533333333333335,
+      "times_opened": 5,
+      "seconds_open": 10.0056334,
+      "ok_latency_ms": {
+        "n": 308,
+        "min": 11.358154,
+        "p50": 21.710697,
+        "p95": 30.342829,
+        "p99": 31.579455,
+        "max": 32.421233
+      },
+      "transitions": [
+        {
+          "at_ms": 960.930367,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 2962.094474,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 3031.221871,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 3919.46078,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 5920.618713,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 5991.138859,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 6906.550044,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 8908.049022,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 8991.008767,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 9875.886829,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 11876.560927,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 11955.828104,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 12874.379352,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 14875.517636,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 14948.716747,
+          "from": "half-open",
+          "to": "closed"
+        }
+      ]
+    },
+    {
+      "run": 1,
+      "workers": 4,
+      "calls_let_through": 408,
+      "service_counted": 408,
+      "let_through_but_never_counted_by_the_service": 0,
+      "ok": 360,
+      "overloaded_503": 0,
+      "timeout": 48,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 117,
+      "failure_pct_of_calls_let_through": 11.764705882352942,
+      "calls_per_second": 27.2,
+      "ok_per_second": 24,
+      "times_opened": 6,
+      "seconds_open": 11.697020796,
+      "ok_latency_ms": {
+        "n": 360,
+        "min": 11.224125,
+        "p50": 20.806563,
+        "p95": 30.096428,
+        "p99": 31.112691,
+        "max": 31.70731
+      },
+      "transitions": [
+        {
+          "at_ms": 523.595643,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 2525.432661,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 2581.211529,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 3086.224847,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 5087.687096,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 5169.850101,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 5672.874498,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 7674.327874,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 7720.213931,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 8211.278574,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 10212.693562,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 10257.179725,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 10758.019966,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 12759.758775,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 12826.98616,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 13312.102448,
+          "from": "closed",
+          "to": "open"
+        }
+      ]
+    },
+    {
+      "run": 1,
+      "workers": 8,
+      "calls_let_through": 506,
+      "service_counted": 504,
+      "let_through_but_never_counted_by_the_service": 2,
+      "ok": 420,
+      "overloaded_503": 0,
+      "timeout": 86,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 358,
+      "failure_pct_of_calls_let_through": 16.99604743083004,
+      "calls_per_second": 33.733333333333334,
+      "ok_per_second": 28,
+      "times_opened": 7,
+      "seconds_open": 12.728038792,
+      "ok_latency_ms": {
+        "n": 420,
+        "min": 10.964679,
+        "p50": 22.009564,
+        "p95": 30.411017,
+        "p99": 31.336638,
+        "max": 33.270598
+      },
+      "transitions": [
+        {
+          "at_ms": 281.602641,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 2282.230922,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 2357.698103,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 2626.195491,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 4627.474828,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 4702.021558,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 4960.844278,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 6962.618271,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 7014.620693,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 7272.409372,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 9274.22363,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 9354.839859,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 9622.077574,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 11623.326773,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 11694.13658,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 11956.150164,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 13957.964392,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 14029.003149,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 14282.05883,
+          "from": "closed",
+          "to": "open"
+        }
+      ]
+    },
+    {
+      "run": 1,
+      "workers": 16,
+      "calls_let_through": 438,
+      "service_counted": 394,
+      "let_through_but_never_counted_by_the_service": 44,
+      "ok": 363,
+      "overloaded_503": 0,
+      "timeout": 75,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 742,
+      "failure_pct_of_calls_let_through": 17.123287671232877,
+      "calls_per_second": 29.2,
+      "ok_per_second": 24.2,
+      "times_opened": 7,
+      "seconds_open": 13.751087254,
+      "ok_latency_ms": {
+        "n": 363,
+        "min": 11.396116,
+        "p50": 21.944783,
+        "p95": 30.501898,
+        "p99": 32.586804,
+        "max": 33.34601
+      },
+      "transitions": [
+        {
+          "at_ms": 100.506009,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 2101.031797,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 2175.486092,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 2284.982586,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 4285.297517,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 4363.824999,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 4471.25692,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 6471.733839,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 6532.40643,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 6636.691404,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 8637.871408,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 8693.055196,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 8903.519773,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 10903.95122,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 10973.589598,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 11078.24322,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 13078.822362,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 13149.490565,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 13253.248937,
+          "from": "closed",
+          "to": "open"
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "workers": 1,
+      "calls_let_through": 683,
+      "service_counted": 683,
+      "let_through_but_never_counted_by_the_service": 0,
+      "ok": 683,
+      "overloaded_503": 0,
+      "timeout": 0,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 0,
+      "failure_pct_of_calls_let_through": 0,
+      "calls_per_second": 45.53333333333333,
+      "ok_per_second": 45.53333333333333,
+      "times_opened": 0,
+      "seconds_open": 0,
+      "ok_latency_ms": {
+        "n": 683,
+        "min": 11.408531,
+        "p50": 21.962482,
+        "p95": 30.690744,
+        "p99": 31.795958,
+        "max": 32.679511
+      },
+      "transitions": null
+    },
+    {
+      "run": 2,
+      "workers": 2,
+      "calls_let_through": 339,
+      "service_counted": 339,
+      "let_through_but_never_counted_by_the_service": 0,
+      "ok": 309,
+      "overloaded_503": 0,
+      "timeout": 30,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 44,
+      "failure_pct_of_calls_let_through": 8.849557522123893,
+      "calls_per_second": 22.6,
+      "ok_per_second": 20.6,
+      "times_opened": 5,
+      "seconds_open": 10.005537225,
+      "ok_latency_ms": {
+        "n": 309,
+        "min": 11.432436,
+        "p50": 21.542651,
+        "p95": 30.746375,
+        "p99": 31.240657,
+        "max": 31.830426
+      },
+      "transitions": [
+        {
+          "at_ms": 955.600584,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 2956.048396,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 3014.74232,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 3920.40235,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 5921.513524,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 5981.877561,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 6883.208221,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 8884.446098,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 8949.445862,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 9862.27461,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 11863.542564,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 11929.724727,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 12869.398894,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 14870.871302,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 14944.954402,
+          "from": "half-open",
+          "to": "closed"
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "workers": 4,
+      "calls_let_through": 408,
+      "service_counted": 408,
+      "let_through_but_never_counted_by_the_service": 0,
+      "ok": 360,
+      "overloaded_503": 0,
+      "timeout": 48,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 123,
+      "failure_pct_of_calls_let_through": 11.764705882352942,
+      "calls_per_second": 27.2,
+      "ok_per_second": 24,
+      "times_opened": 6,
+      "seconds_open": 11.652055362,
+      "ok_latency_ms": {
+        "n": 360,
+        "min": 11.01795,
+        "p50": 21.655547,
+        "p95": 30.186426,
+        "p99": 31.42585,
+        "max": 31.865532
+      },
+      "transitions": [
+        {
+          "at_ms": 510.086128,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 2512.018401,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 2569.487512,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 3077.829922,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 5079.610744,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 5143.575407,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 5660.453741,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 7661.864984,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 7734.365296,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 8230.787315,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 10231.848618,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 10285.369557,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 10786.646245,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 12788.666242,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 12860.578647,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 13357.068699,
+          "from": "closed",
+          "to": "open"
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "workers": 8,
+      "calls_let_through": 505,
+      "service_counted": 504,
+      "let_through_but_never_counted_by_the_service": 1,
+      "ok": 420,
+      "overloaded_503": 0,
+      "timeout": 85,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 343,
+      "failure_pct_of_calls_let_through": 16.831683168316832,
+      "calls_per_second": 33.666666666666664,
+      "ok_per_second": 28,
+      "times_opened": 7,
+      "seconds_open": 12.782001735,
+      "ok_latency_ms": {
+        "n": 420,
+        "min": 10.910046,
+        "p50": 21.589583,
+        "p95": 30.43343,
+        "p99": 31.412994,
+        "max": 33.360783
+      },
+      "transitions": [
+        {
+          "at_ms": 277.304024,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 2278.551251,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 2355.395413,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 2604.699748,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 4605.829559,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 4666.341304,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 4923.67495,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 6925.3361,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 6982.47418,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 7247.073179,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 9249.051928,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 9316.260283,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 9567.936616,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 11569.262056,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 11622.661527,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 11885.084019,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 13886.568672,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 13965.067169,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 14227.396791,
+          "from": "closed",
+          "to": "open"
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "workers": 16,
+      "calls_let_through": 427,
+      "service_counted": 378,
+      "let_through_but_never_counted_by_the_service": 49,
+      "ok": 353,
+      "overloaded_503": 0,
+      "timeout": 74,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 682,
+      "failure_pct_of_calls_let_through": 17.330210772833723,
+      "calls_per_second": 28.466666666666665,
+      "ok_per_second": 23.533333333333335,
+      "times_opened": 7,
+      "seconds_open": 13.79534271,
+      "ok_latency_ms": {
+        "n": 353,
+        "min": 11.277012,
+        "p50": 22.263702,
+        "p95": 30.392389,
+        "p99": 31.419981,
+        "max": 32.198944
+      },
+      "transitions": [
+        {
+          "at_ms": 101.022239,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 2101.479899,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 2169.365051,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 2276.104676,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 4276.569657,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 4346.164141,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 4450.579312,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 6451.393823,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 6505.734799,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 6615.228541,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 8616.265113,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 8677.605063,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 8780.172067,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 10780.290706,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 10837.745012,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 11044.776266,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 13045.256784,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 13105.385459,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 13208.467532,
+          "from": "closed",
+          "to": "open"
+        }
+      ]
+    },
+    {
+      "run": 3,
+      "workers": 1,
+      "calls_let_through": 695,
+      "service_counted": 695,
+      "let_through_but_never_counted_by_the_service": 0,
+      "ok": 695,
+      "overloaded_503": 0,
+      "timeout": 0,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 0,
+      "failure_pct_of_calls_let_through": 0,
+      "calls_per_second": 46.333333333333336,
+      "ok_per_second": 46.333333333333336,
+      "times_opened": 0,
+      "seconds_open": 0,
+      "ok_latency_ms": {
+        "n": 695,
+        "min": 11.354674,
+        "p50": 21.570905,
+        "p95": 30.809435,
+        "p99": 31.591178,
+        "max": 32.069294
+      },
+      "transitions": null
+    },
+    {
+      "run": 3,
+      "workers": 2,
+      "calls_let_through": 341,
+      "service_counted": 341,
+      "let_through_but_never_counted_by_the_service": 0,
+      "ok": 311,
+      "overloaded_503": 0,
+      "timeout": 30,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 44,
+      "failure_pct_of_calls_let_through": 8.79765395894428,
+      "calls_per_second": 22.733333333333334,
+      "ok_per_second": 20.733333333333334,
+      "times_opened": 5,
+      "seconds_open": 10.006137498,
+      "ok_latency_ms": {
+        "n": 311,
+        "min": 11.185346,
+        "p50": 21.498275,
+        "p95": 30.729684,
+        "p99": 31.475091,
+        "max": 31.838093
+      },
+      "transitions": [
+        {
+          "at_ms": 923.149339,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 2924.2663,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 2994.232313,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 3960.611591,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 5961.886315,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 6048.953,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 6933.629133,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 8934.749087,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 8996.692777,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 9870.804691,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 11872.011146,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 11927.381106,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 12839.937311,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 14841.356715,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 14899.608024,
+          "from": "half-open",
+          "to": "closed"
+        }
+      ]
+    },
+    {
+      "run": 3,
+      "workers": 4,
+      "calls_let_through": 408,
+      "service_counted": 408,
+      "let_through_but_never_counted_by_the_service": 0,
+      "ok": 360,
+      "overloaded_503": 0,
+      "timeout": 48,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 123,
+      "failure_pct_of_calls_let_through": 11.764705882352942,
+      "calls_per_second": 27.2,
+      "ok_per_second": 24,
+      "times_opened": 6,
+      "seconds_open": 11.649048664,
+      "ok_latency_ms": {
+        "n": 360,
+        "min": 11.168962,
+        "p50": 21.675563,
+        "p95": 30.659539,
+        "p99": 31.413063,
+        "max": 32.239771
+      },
+      "transitions": [
+        {
+          "at_ms": 498.386344,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 2500.247751,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 2569.632241,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 3087.593867,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 5088.965701,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 5148.252945,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 5646.774634,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 7648.734054,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 7723.736937,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 8218.683441,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 10220.474566,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 10267.070114,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 10772.7325,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 12774.430348,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 12841.381811,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 13361.098316,
+          "from": "closed",
+          "to": "open"
+        }
+      ]
+    },
+    {
+      "run": 3,
+      "workers": 8,
+      "calls_let_through": 505,
+      "service_counted": 504,
+      "let_through_but_never_counted_by_the_service": 1,
+      "ok": 420,
+      "overloaded_503": 0,
+      "timeout": 85,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 336,
+      "failure_pct_of_calls_let_through": 16.831683168316832,
+      "calls_per_second": 33.666666666666664,
+      "ok_per_second": 28,
+      "times_opened": 7,
+      "seconds_open": 12.778069004,
+      "ok_latency_ms": {
+        "n": 420,
+        "min": 10.846757,
+        "p50": 21.633508,
+        "p95": 30.623346,
+        "p99": 31.527408,
+        "max": 32.160349
+      },
+      "transitions": [
+        {
+          "at_ms": 277.559172,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 2278.418717,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 2344.986136,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 2614.109988,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 4615.25623,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 4680.05769,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 4927.380477,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 6928.873378,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 6987.843624,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 7244.920373,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 9246.411202,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 9310.277718,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 9568.64575,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 11568.860428,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 11638.944848,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 11910.052217,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 13911.162632,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 13964.160166,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 14228.496662,
+          "from": "closed",
+          "to": "open"
+        }
+      ]
+    },
+    {
+      "run": 3,
+      "workers": 16,
+      "calls_let_through": 410,
+      "service_counted": 362,
+      "let_through_but_never_counted_by_the_service": 48,
+      "ok": 355,
+      "overloaded_503": 0,
+      "timeout": 55,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 712,
+      "failure_pct_of_calls_let_through": 13.414634146341463,
+      "calls_per_second": 27.333333333333332,
+      "ok_per_second": 23.666666666666668,
+      "times_opened": 7,
+      "seconds_open": 13.879435306,
+      "ok_latency_ms": {
+        "n": 355,
+        "min": 11.006981,
+        "p50": 21.377467,
+        "p95": 30.303768,
+        "p99": 31.648787,
+        "max": 32.351878
+      },
+      "transitions": [
+        {
+          "at_ms": 100.404763,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 2101.346408,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 2163.678001,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 2275.096386,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 4275.298994,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 4346.384091,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 4448.758943,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 6448.933611,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 6518.660882,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 6622.720201,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 8623.135819,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 8671.992494,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 8776.144626,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 10777.265974,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 10829.995305,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 10940.206771,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 12941.278858,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 13016.914518,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 13124.929382,
+          "from": "closed",
+          "to": "open"
+        }
+      ]
+    },
+    {
+      "run": 4,
+      "workers": 1,
+      "calls_let_through": 700,
+      "service_counted": 700,
+      "let_through_but_never_counted_by_the_service": 0,
+      "ok": 700,
+      "overloaded_503": 0,
+      "timeout": 0,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 0,
+      "failure_pct_of_calls_let_through": 0,
+      "calls_per_second": 46.666666666666664,
+      "ok_per_second": 46.666666666666664,
+      "times_opened": 0,
+      "seconds_open": 0,
+      "ok_latency_ms": {
+        "n": 700,
+        "min": 11.355164,
+        "p50": 21.595063,
+        "p95": 30.591972,
+        "p99": 31.228477,
+        "max": 31.977153
+      },
+      "transitions": null
+    },
+    {
+      "run": 4,
+      "workers": 2,
+      "calls_let_through": 345,
+      "service_counted": 345,
+      "let_through_but_never_counted_by_the_service": 0,
+      "ok": 315,
+      "overloaded_503": 0,
+      "timeout": 30,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 42,
+      "failure_pct_of_calls_let_through": 8.695652173913043,
+      "calls_per_second": 23,
+      "ok_per_second": 21,
+      "times_opened": 5,
+      "seconds_open": 10.007385532,
+      "ok_latency_ms": {
+        "n": 315,
+        "min": 11.375333,
+        "p50": 21.264282,
+        "p95": 30.880193,
+        "p99": 31.450048,
+        "max": 31.978083
+      },
+      "transitions": [
+        {
+          "at_ms": 938.760878,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 2940.499142,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 3021.952637,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 3960.6274,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 5962.15196,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 6009.61095,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 6920.419402,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 8921.858615,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 8977.220312,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 9886.394488,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 11887.633472,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 11953.011764,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 12828.187216,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 14829.631727,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 14890.07466,
+          "from": "half-open",
+          "to": "closed"
+        }
+      ]
+    },
+    {
+      "run": 4,
+      "workers": 4,
+      "calls_let_through": 408,
+      "service_counted": 408,
+      "let_through_but_never_counted_by_the_service": 0,
+      "ok": 360,
+      "overloaded_503": 0,
+      "timeout": 48,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 126,
+      "failure_pct_of_calls_let_through": 11.764705882352942,
+      "calls_per_second": 27.2,
+      "ok_per_second": 24,
+      "times_opened": 6,
+      "seconds_open": 11.599332512,
+      "ok_latency_ms": {
+        "n": 360,
+        "min": 10.908561,
+        "p50": 21.345388,
+        "p95": 30.689456,
+        "p99": 31.327939,
+        "max": 31.713722
+      },
+      "transitions": [
+        {
+          "at_ms": 523.249054,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 2524.973232,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 2598.287097,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 3106.779875,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 5108.49418,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 5155.166344,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 5659.759658,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 7661.330231,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 7729.709237,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 8250.846712,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 10252.772929,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 10309.621637,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 10818.059846,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 12819.528624,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 12894.512519,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 13410.289189,
+          "from": "closed",
+          "to": "open"
+        }
+      ]
+    },
+    {
+      "run": 4,
+      "workers": 8,
+      "calls_let_through": 504,
+      "service_counted": 503,
+      "let_through_but_never_counted_by_the_service": 1,
+      "ok": 420,
+      "overloaded_503": 0,
+      "timeout": 84,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 336,
+      "failure_pct_of_calls_let_through": 16.666666666666668,
+      "calls_per_second": 33.6,
+      "ok_per_second": 28,
+      "times_opened": 7,
+      "seconds_open": 12.767125419,
+      "ok_latency_ms": {
+        "n": 420,
+        "min": 11.072998,
+        "p50": 21.695571,
+        "p95": 30.90273,
+        "p99": 32.108321,
+        "max": 33.757979
+      },
+      "transitions": [
+        {
+          "at_ms": 264.993141,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 2266.308316,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 2312.137051,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 2579.685922,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 4583.455971,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 4650.175704,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 4916.30765,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 6931.273431,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 6997.166141,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 7259.131217,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 9274.525475,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 9349.617881,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 9621.201959,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 11622.9625,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 11695.357866,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 11950.184335,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 13952.011276,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 14006.544545,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 14272.496116,
+          "from": "closed",
+          "to": "open"
+        }
+      ]
+    },
+    {
+      "run": 4,
+      "workers": 16,
+      "calls_let_through": 400,
+      "service_counted": 348,
+      "let_through_but_never_counted_by_the_service": 52,
+      "ok": 345,
+      "overloaded_503": 0,
+      "timeout": 55,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 712,
+      "failure_pct_of_calls_let_through": 13.75,
+      "calls_per_second": 26.666666666666668,
+      "ok_per_second": 23,
+      "times_opened": 7,
+      "seconds_open": 13.875971365,
+      "ok_latency_ms": {
+        "n": 345,
+        "min": 11.180807,
+        "p50": 21.99245,
+        "p95": 30.722507,
+        "p99": 31.916972,
+        "max": 33.155242
+      },
+      "transitions": [
+        {
+          "at_ms": 100.865526,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 2101.45125,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 2152.131299,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 2254.317076,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 4255.400922,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 4323.826883,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 4429.482504,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 6430.296095,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 6499.113355,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 6605.473586,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 8606.389311,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 8688.945529,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 8790.079162,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 10790.464742,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 10859.567502,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 10964.782497,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 12964.981404,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 13018.019464,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 13128.74344,
+          "from": "closed",
+          "to": "open"
+        }
+      ]
+    },
+    {
+      "run": 5,
+      "workers": 1,
+      "calls_let_through": 696,
+      "service_counted": 696,
+      "let_through_but_never_counted_by_the_service": 0,
+      "ok": 696,
+      "overloaded_503": 0,
+      "timeout": 0,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 0,
+      "failure_pct_of_calls_let_through": 0,
+      "calls_per_second": 46.4,
+      "ok_per_second": 46.4,
+      "times_opened": 0,
+      "seconds_open": 0,
+      "ok_latency_ms": {
+        "n": 696,
+        "min": 11.210733,
+        "p50": 21.417818,
+        "p95": 30.556905,
+        "p99": 31.347494,
+        "max": 31.758743
+      },
+      "transitions": null
+    },
+    {
+      "run": 5,
+      "workers": 2,
+      "calls_let_through": 340,
+      "service_counted": 340,
+      "let_through_but_never_counted_by_the_service": 0,
+      "ok": 310,
+      "overloaded_503": 0,
+      "timeout": 30,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 41,
+      "failure_pct_of_calls_let_through": 8.823529411764707,
+      "calls_per_second": 22.666666666666668,
+      "ok_per_second": 20.666666666666668,
+      "times_opened": 5,
+      "seconds_open": 10.005422457,
+      "ok_latency_ms": {
+        "n": 310,
+        "min": 11.522153,
+        "p50": 21.263014,
+        "p95": 30.736799,
+        "p99": 31.297741,
+        "max": 31.747579
+      },
+      "transitions": [
+        {
+          "at_ms": 962.501647,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 2963.827017,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 3030.21212,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 3942.505983,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 5942.82205,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 6006.510973,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 6910.056636,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 8911.23657,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 8960.523586,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 9854.1306,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 11855.420311,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 11911.602579,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 12862.431788,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 14863.743163,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 14925.511321,
+          "from": "half-open",
+          "to": "closed"
+        }
+      ]
+    },
+    {
+      "run": 5,
+      "workers": 4,
+      "calls_let_through": 408,
+      "service_counted": 408,
+      "let_through_but_never_counted_by_the_service": 0,
+      "ok": 360,
+      "overloaded_503": 0,
+      "timeout": 48,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 123,
+      "failure_pct_of_calls_let_through": 11.764705882352942,
+      "calls_per_second": 27.2,
+      "ok_per_second": 24,
+      "times_opened": 6,
+      "seconds_open": 11.655049641,
+      "ok_latency_ms": {
+        "n": 360,
+        "min": 11.126101,
+        "p50": 21.574601,
+        "p95": 30.227243,
+        "p99": 30.821141,
+        "max": 40.324812
+      },
+      "transitions": [
+        {
+          "at_ms": 536.982651,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 2538.39652,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 2606.029704,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 3103.302392,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 5104.671568,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 5174.436714,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 5677.943286,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 7679.602141,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 7733.353999,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 8252.633862,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 10254.108099,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 10313.744182,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 10788.512053,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 12790.221006,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 12856.746285,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 13354.268049,
+          "from": "closed",
+          "to": "open"
+        }
+      ]
+    },
+    {
+      "run": 5,
+      "workers": 8,
+      "calls_let_through": 506,
+      "service_counted": 504,
+      "let_through_but_never_counted_by_the_service": 2,
+      "ok": 420,
+      "overloaded_503": 0,
+      "timeout": 86,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 336,
+      "failure_pct_of_calls_let_through": 16.99604743083004,
+      "calls_per_second": 33.733333333333334,
+      "ok_per_second": 28,
+      "times_opened": 7,
+      "seconds_open": 12.732227713,
+      "ok_latency_ms": {
+        "n": 420,
+        "min": 10.895516,
+        "p50": 22.580381,
+        "p95": 30.522508,
+        "p99": 31.258141,
+        "max": 32.594839
+      },
+      "transitions": [
+        {
+          "at_ms": 270.488759,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 2271.54512,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 2336.637518,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 2601.87101,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 4603.378006,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 4663.565126,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 4941.727381,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 6942.57828,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 7020.553125,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 7300.661683,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 9301.465234,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 9358.372731,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 9626.806204,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 11628.118324,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 11679.97715,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 11945.901659,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 13947.102748,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 14010.414764,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 14274.947816,
+          "from": "closed",
+          "to": "open"
+        }
+      ]
+    },
+    {
+      "run": 5,
+      "workers": 16,
+      "calls_let_through": 411,
+      "service_counted": 366,
+      "let_through_but_never_counted_by_the_service": 45,
+      "ok": 358,
+      "overloaded_503": 0,
+      "timeout": 53,
+      "unreachable": 0,
+      "rejected_by_the_breaker": 729,
+      "failure_pct_of_calls_let_through": 12.895377128953772,
+      "calls_per_second": 27.4,
+      "ok_per_second": 23.866666666666667,
+      "times_opened": 7,
+      "seconds_open": 13.867165570000001,
+      "ok_latency_ms": {
+        "n": 358,
+        "min": 10.821027,
+        "p50": 21.763932,
+        "p95": 30.349518,
+        "p99": 31.43131,
+        "max": 31.509422
+      },
+      "transitions": [
+        {
+          "at_ms": 100.994388,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 2101.26712,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 2183.286227,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 2283.826552,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 4284.908566,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 4348.527351,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 4459.28698,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 6460.432263,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 6512.323317,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 6613.621816,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 8614.181632,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 8678.435819,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 8788.552707,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 10789.215821,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 10853.026472,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 10963.696337,
+          "from": "closed",
+          "to": "open"
+        },
+        {
+          "at_ms": 12964.290742,
+          "from": "open",
+          "to": "half-open"
+        },
+        {
+          "at_ms": 13029.393023,
+          "from": "half-open",
+          "to": "closed"
+        },
+        {
+          "at_ms": 13137.49261,
+          "from": "closed",
+          "to": "open"
+        }
+      ]
+    }
+  ],
+  "summary_median_and_range_across_runs": [
+    {
+      "workers": 1,
+      "calls_per_second": {
+        "runs_with_data": 5,
+        "median": 46.333333333333336,
+        "min": 45.53333333333333,
+        "max": 46.666666666666664
+      },
+      "ok_per_second": {
+        "runs_with_data": 5,
+        "median": 46.333333333333336,
+        "min": 45.53333333333333,
+        "max": 46.666666666666664
+      },
+      "failure_pct_of_calls_let_through": {
+        "runs_with_data": 5,
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "times_opened": {
+        "runs_with_data": 5,
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "seconds_open": {
+        "runs_with_data": 5,
+        "median": 0,
+        "min": 0,
+        "max": 0
+      }
+    },
+    {
+      "workers": 2,
+      "calls_per_second": {
+        "runs_with_data": 5,
+        "median": 22.666666666666668,
+        "min": 22.533333333333335,
+        "max": 23
+      },
+      "ok_per_second": {
+        "runs_with_data": 5,
+        "median": 20.666666666666668,
+        "min": 20.533333333333335,
+        "max": 21
+      },
+      "failure_pct_of_calls_let_through": {
+        "runs_with_data": 5,
+        "median": 8.823529411764707,
+        "min": 8.695652173913043,
+        "max": 8.875739644970414
+      },
+      "times_opened": {
+        "runs_with_data": 5,
+        "median": 5,
+        "min": 5,
+        "max": 5
+      },
+      "seconds_open": {
+        "runs_with_data": 5,
+        "median": 10.0056334,
+        "min": 10.005422457,
+        "max": 10.007385532
+      }
+    },
+    {
+      "workers": 4,
+      "calls_per_second": {
+        "runs_with_data": 5,
+        "median": 27.2,
+        "min": 27.2,
+        "max": 27.2
+      },
+      "ok_per_second": {
+        "runs_with_data": 5,
+        "median": 24,
+        "min": 24,
+        "max": 24
+      },
+      "failure_pct_of_calls_let_through": {
+        "runs_with_data": 5,
+        "median": 11.764705882352942,
+        "min": 11.764705882352942,
+        "max": 11.764705882352942
+      },
+      "times_opened": {
+        "runs_with_data": 5,
+        "median": 6,
+        "min": 6,
+        "max": 6
+      },
+      "seconds_open": {
+        "runs_with_data": 5,
+        "median": 11.652055362,
+        "min": 11.599332512,
+        "max": 11.697020796
+      }
+    },
+    {
+      "workers": 8,
+      "calls_per_second": {
+        "runs_with_data": 5,
+        "median": 33.666666666666664,
+        "min": 33.6,
+        "max": 33.733333333333334
+      },
+      "ok_per_second": {
+        "runs_with_data": 5,
+        "median": 28,
+        "min": 28,
+        "max": 28
+      },
+      "failure_pct_of_calls_let_through": {
+        "runs_with_data": 5,
+        "median": 16.831683168316832,
+        "min": 16.666666666666668,
+        "max": 16.99604743083004
+      },
+      "times_opened": {
+        "runs_with_data": 5,
+        "median": 7,
+        "min": 7,
+        "max": 7
+      },
+      "seconds_open": {
+        "runs_with_data": 5,
+        "median": 12.767125419,
+        "min": 12.728038792,
+        "max": 12.782001735
+      }
+    },
+    {
+      "workers": 16,
+      "calls_per_second": {
+        "runs_with_data": 5,
+        "median": 27.4,
+        "min": 26.666666666666668,
+        "max": 29.2
+      },
+      "ok_per_second": {
+        "runs_with_data": 5,
+        "median": 23.666666666666668,
+        "min": 23,
+        "max": 24.2
+      },
+      "failure_pct_of_calls_let_through": {
+        "runs_with_data": 5,
+        "median": 13.75,
+        "min": 12.895377128953772,
+        "max": 17.330210772833723
+      },
+      "times_opened": {
+        "runs_with_data": 5,
+        "median": 7,
+        "min": 7,
+        "max": 7
+      },
+      "seconds_open": {
+        "runs_with_data": 5,
+        "median": 13.867165570000001,
+        "min": 13.751087254,
+        "max": 13.879435306
+      }
+    }
+  ]
+}
