@@ -13,6 +13,7 @@ import (
 	"time"
 
 	"github.com/ErnestoCM-13/proyecto-sistema-resiliente-con-backpressure/internal/clock"
+	"github.com/ErnestoCM-13/proyecto-sistema-resiliente-con-backpressure/internal/pace"
 	"github.com/ErnestoCM-13/proyecto-sistema-resiliente-con-backpressure/internal/stream"
 )
 
@@ -25,6 +26,8 @@ type config struct {
 	rate      int
 	batchSize int
 	limit     int
+	schedule  *pace.Schedule
+	out       string
 }
 
 func main() {
@@ -54,6 +57,10 @@ func run() error {
 		return fmt.Errorf("opening %s: %w", cfg.file, err)
 	}
 	defer f.Close()
+
+	if cfg.schedule != nil {
+		return publishOnSchedule(ctx, f, stream.NewPublisher(client, cfg.streamKey, 1), cfg)
+	}
 
 	batchSize := cfg.batchSize
 	if cfg.rate > 0 {
@@ -125,12 +132,15 @@ func describeRate(rate int) string {
 
 func parseFlags() (config, error) {
 	var cfg config
+	var schedule string
 	flag.StringVar(&cfg.file, "file", "data/eventos_hotsale.jsonl", "path to the JSONL event log")
 	flag.StringVar(&cfg.redisAddr, "redis-addr", "localhost:6379", "host:port of Redis")
 	flag.StringVar(&cfg.streamKey, "stream", "hotsale:events", "stream key to publish to")
 	flag.IntVar(&cfg.rate, "rate", 0, "events per second; 0 publishes as fast as possible")
 	flag.IntVar(&cfg.batchSize, "batch", 1000, "events per pipeline batch when the rate is unlimited")
 	flag.IntVar(&cfg.limit, "limit", 0, "stop after this many events; 0 publishes the whole file")
+	flag.StringVar(&schedule, "schedule", "", "rate:duration segments such as 43:1m,430:2m,43:5m; replaces -rate and -limit")
+	flag.StringVar(&cfg.out, "out", "data/producer-report.json", "path for the JSON pacing report of a schedule; empty writes none")
 	flag.Parse()
 
 	var problems []error
@@ -151,6 +161,17 @@ func parseFlags() (config, error) {
 	}
 	if cfg.limit < 0 {
 		problems = append(problems, fmt.Errorf("-limit: %d is negative", cfg.limit))
+	}
+	if schedule != "" {
+		parsed, err := pace.ParseSchedule(schedule)
+		if err != nil {
+			problems = append(problems, fmt.Errorf("-schedule: %w", err))
+		} else {
+			cfg.schedule = &parsed
+		}
+		if cfg.rate != 0 || cfg.limit != 0 {
+			problems = append(problems, errors.New("-schedule: cannot be combined with -rate or -limit"))
+		}
 	}
 	if len(problems) > 0 {
 		return config{}, errors.Join(problems...)
