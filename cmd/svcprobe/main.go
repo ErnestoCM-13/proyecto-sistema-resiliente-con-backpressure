@@ -28,9 +28,10 @@ const (
 	modeLadder   mode = "ladder"
 	modeRecovery mode = "recovery"
 	modeBreaker  mode = "breaker"
+	modeLoad     mode = "load"
 )
 
-var modes = [3]mode{modeLadder, modeRecovery, modeBreaker}
+var modes = [4]mode{modeLadder, modeRecovery, modeBreaker, modeLoad}
 
 func parseMode(s string) (mode, error) {
 	for _, m := range modes {
@@ -64,6 +65,9 @@ type config struct {
 	failures     int
 	cooldown     time.Duration
 	trials       int
+
+	loadRate int
+	loadFor  time.Duration
 }
 
 func main() {
@@ -91,7 +95,12 @@ func run() error {
 		return err
 	}
 	svc := newService(cfg.baseURL)
-	if err := svc.reset(ctx); err != nil {
+	if cfg.mode == modeLoad {
+		_, err = svc.totalRequests(ctx)
+	} else {
+		err = svc.reset(ctx)
+	}
+	if err != nil {
 		return fmt.Errorf("is inventory_service.py running at %s? %w", cfg.baseURL, err)
 	}
 
@@ -117,6 +126,13 @@ func run() error {
 			return err
 		}
 		printBreaker(rep)
+		report = rep
+	case modeLoad:
+		rep, err := outsideLoad(ctx, client, cfg)
+		if err != nil {
+			return err
+		}
+		printOutsideLoad(rep)
 		report = rep
 	default:
 		return fmt.Errorf("mode %q has no experiment", cfg.mode)
@@ -166,10 +182,10 @@ func parseList(name, s string, highest int) ([]int, error) {
 func parseFlags() (config, error) {
 	var cfg config
 	var modeName, rates, workers string
-	flag.StringVar(&modeName, "mode", string(modeLadder), "experiment to run: ladder, recovery or breaker")
+	flag.StringVar(&modeName, "mode", string(modeLadder), "experiment to run: ladder, recovery, breaker or load")
 	flag.StringVar(&cfg.baseURL, "url", "http://localhost:8090", "base address of the inventory service")
 	flag.IntVar(&cfg.runs, "runs", 5, "how many times the experiment is repeated")
-	flag.DurationVar(&cfg.timeout, "timeout", 5*time.Second, "ladder and recovery: per request; long on purpose, so slow answers are seen instead of cut")
+	flag.DurationVar(&cfg.timeout, "timeout", 5*time.Second, "ladder, recovery and load: per request; long on purpose, so slow answers are seen instead of cut")
 	flag.StringVar(&cfg.machine, "machine", "", "where this was measured, which is part of the result")
 	flag.StringVar(&cfg.out, "out", "data/svcprobe-{mode}.json", "path for the JSON report, {mode} is replaced; empty writes none")
 
@@ -188,6 +204,9 @@ func parseFlags() (config, error) {
 	flag.IntVar(&cfg.failures, "failures", 5, "breaker: consecutive failures that open it")
 	flag.DurationVar(&cfg.cooldown, "cooldown", 2*time.Second, "breaker: how long it stays open")
 	flag.IntVar(&cfg.trials, "trials", 3, "breaker: successful trial calls that close it again")
+
+	flag.IntVar(&cfg.loadRate, "load-rate", 150, "load: arrival rate of another client's requests; the service's counters are left alone")
+	flag.DurationVar(&cfg.loadFor, "load-for", 20*time.Second, "load: how long that client keeps sending")
 	flag.Parse()
 
 	var problems []error
@@ -255,6 +274,13 @@ func parseFlags() (config, error) {
 	}
 	if cfg.trials < 1 {
 		problems = append(problems, fmt.Errorf("-trials: %d is not positive", cfg.trials))
+	}
+
+	if cfg.loadRate < 1 || cfg.loadRate > maxRate {
+		problems = append(problems, fmt.Errorf("-load-rate: %d is outside 1..%d", cfg.loadRate, maxRate))
+	}
+	if cfg.loadFor < time.Second {
+		problems = append(problems, fmt.Errorf("-load-for: %s is shorter than one second", cfg.loadFor))
 	}
 
 	if len(problems) > 0 {
