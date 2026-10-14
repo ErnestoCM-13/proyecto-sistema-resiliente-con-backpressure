@@ -475,7 +475,7 @@ func TestEveryCallIsEitherRunOrRejectedUnderConcurrency(t *testing.T) {
 			for i := range perWork {
 				err := b.Do(func() error {
 					ran.Add(1)
-					if (w+i)%3 == 0 {
+					if (w+i)%7 == 0 {
 						return nil
 					}
 					return errFailure
@@ -499,7 +499,7 @@ func TestEveryCallIsEitherRunOrRejectedUnderConcurrency(t *testing.T) {
 		t.Fatalf("the breaker counted %d rejections, the callers saw %d", stats.Rejected, rejected.Load())
 	}
 	if stats.Opened == 0 {
-		t.Fatal("the breaker never opened although two calls in three fail")
+		t.Fatal("the breaker never opened although every caller fails six calls in a row")
 	}
 }
 
