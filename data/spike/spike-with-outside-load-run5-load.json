@@ -1,0 +1,31 @@
+{
+  "machine": "AMD Ryzen 5 5600G (6c/12t), 7.7 GiB RAM, WSL2 Ubuntu 24.04",
+  "base_url": "http://localhost:8090",
+  "rate_per_second": 150,
+  "seconds": 20,
+  "request_timeout_seconds": 5,
+  "sent": 3000,
+  "ok": 2235,
+  "overloaded_503": 765,
+  "timeout": 0,
+  "unreachable": 0,
+  "protocol": 0,
+  "failure_pct": 25.5,
+  "max_launch_lateness_ms": 1.2768,
+  "ok_latency_ms": {
+    "n": 2235,
+    "min": 11.843168,
+    "p50": 488.296828,
+    "p95": 491.641456,
+    "p99": 497.912179,
+    "max": 513.916566
+  },
+  "overloaded_503_latency_ms": {
+    "n": 765,
+    "min": 220.21531,
+    "p50": 488.298349,
+    "p95": 491.626125,
+    "p99": 501.13155,
+    "max": 513.460423
+  }
+}

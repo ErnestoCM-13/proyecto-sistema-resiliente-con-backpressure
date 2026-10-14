@@ -1,0 +1,934 @@
+{
+  "consumed_messages": 67080,
+  "claimed_from_a_dead_consumer": 0,
+  "duplicates_discarded": 1949,
+  "parse_errors": 0,
+  "parse_error_samples": null,
+  "stream_reads_redis_left_unanswered": 0,
+  "duration_seconds": 479.977396539,
+  "events_per_second": 135.69597333050217,
+  "end_to_end_latency_ms": {
+    "min": 0.201177,
+    "p50": 74514.094437,
+    "p95": 156625.385084,
+    "p99": 164007.922186,
+    "max": 167734.598662
+  },
+  "count": {
+    "unique_events_aggregated": 65131,
+    "read_but_not_aggregated": 0,
+    "expected_unique_events": 65131,
+    "matches_expected": true,
+    "still_in_the_wait_buffer": 0
+  },
+  "inventory": {
+    "reservations_verified": 17549,
+    "answered_available": 17549,
+    "answered_not_available": 0,
+    "calls_let_through": 17549,
+    "calls_failed_overloaded_503": 0,
+    "calls_failed_timeout": 0,
+    "calls_failed_unreachable": 0,
+    "calls_rejected_by_the_breaker": 0,
+    "publish_to_verified_latency_ms": {
+      "min": 11.774529,
+      "p50": 76233.438246,
+      "p95": 158584.544214,
+      "p99": 165893.965437,
+      "max": 167734.598662
+    }
+  },
+  "breaker": {
+    "times_opened": 0,
+    "seconds_open": 0,
+    "check_timeout_ms": 100,
+    "consecutive_failures_that_open": 5,
+    "cooldown_seconds": 2,
+    "half_open_trials": 3
+  },
+  "backpressure": {
+    "deepest_wait_buffer": 226,
+    "times_engaged": 99,
+    "seconds_engaged": 334.370922488,
+    "engages_at_depth": 200,
+    "releases_at_depth": 50,
+    "capacity": 300,
+    "workers": 1
+  },
+  "dedup": {
+    "window_ttl_seconds": 300,
+    "window_max_entries": 200000,
+    "entries_held_at_the_end": 41408,
+    "evicted_by_time": 23723,
+    "evicted_by_capacity": 0,
+    "consumer_heap_alloc_mib": 14.813926696777344
+  },
+  "timeline": [
+    {
+      "at_seconds": 63.877959875,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 67.106395738,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 67.114678623,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 70.5682551,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 70.576182263,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 73.906567862,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 73.915658545,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 77.635897858,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 77.644154069,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 81.025101919,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 81.033155081,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 84.634224849,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 84.64239997,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 87.800229841,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 87.807813934,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 91.269328087,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 91.278190484,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 94.540798534,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 94.548453293,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 97.954200212,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 97.961775749,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 101.279157299,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 101.287836534,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 104.649363624,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 104.657213071,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 108.015749341,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 108.024028979,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 111.507423181,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 111.515216383,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 115.090015551,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 115.098264149,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 118.438043193,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 118.445821779,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 121.823575439,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 121.831870121,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 125.004254581,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 125.01228358,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 128.364834012,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 128.373551565,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 131.745146014,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 131.754491297,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 135.11770167,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 135.125679093,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 138.476117735,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 138.485077765,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 141.809686797,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 141.818151005,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 145.219828504,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 145.227999703,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 148.638077986,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 148.647899968,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 152.429675698,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 152.438655094,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 155.738529767,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 155.746603223,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 158.931442916,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 158.939116093,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 162.310395014,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 162.318220856,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 165.710190793,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 165.71796848,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 169.061962005,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 169.069934607,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 172.349058911,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 172.357128628,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 175.814997571,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 175.824078202,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 179.638344059,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 179.646335903,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 183.063588423,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 183.072515266,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 186.747709984,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 186.756052755,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 189.915363772,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 189.9235482,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 193.371736676,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 193.379590513,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 196.783283366,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 196.792452341,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 199.955515208,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 199.963181158,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 203.460668421,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 203.468931574,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 206.78106246,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 206.78927964,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 210.194013463,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 210.201870332,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 213.442987866,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 213.45157679,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 217.088779815,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 217.096549681,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 220.480201762,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 220.488097578,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 223.776390158,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 223.784193307,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 227.201115829,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 227.209131737,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 230.493689113,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 230.502033252,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 233.810099605,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 233.817715556,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 237.23692186,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 237.245707752,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 240.498736075,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 240.507653452,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 244.05258405,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 244.060266823,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 247.394262996,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 247.403704668,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 251.221702781,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 251.229493967,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 254.517393131,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 254.526218093,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 257.922568078,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 257.931144977,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 261.129979851,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 261.137654607,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 264.443111348,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 264.451361715,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 267.701627908,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 267.709858136,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 271.000963325,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 271.009099963,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 274.353819302,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 274.36158029,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 277.671871323,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 277.680457216,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 280.89043526,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 280.898333757,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 284.336561021,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 284.344136395,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 287.515306322,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 287.523490645,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 290.946119994,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 290.953748866,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 294.244295929,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 294.252367505,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 297.486048653,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 297.494131404,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 300.836431515,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 300.844207937,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 304.150641963,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 304.158960034,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 307.487720891,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 307.495706038,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 310.91211068,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 310.920427456,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 314.395053833,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 314.403189031,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 317.730532175,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 317.738203764,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 320.994595602,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 321.002807382,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 324.406642661,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 324.414828658,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 327.963278115,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 327.97149789,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 331.339236884,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 331.348401515,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 334.581447081,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 334.589048295,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 337.845597614,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 337.853420858,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 341.278391321,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 341.28648178,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 344.625741086,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 344.634526771,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 348.336333502,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 348.344522518,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 351.733445725,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 351.7412116,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 355.185573813,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 355.193853247,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 358.482398574,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 358.49035161,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 361.708326187,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 361.716518583,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 365.02164069,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 365.029956943,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 368.25919807,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 368.267039294,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 371.864521551,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 371.87220714,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 375.315733947,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 375.325037699,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 378.598124831,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 378.606927103,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 382.088350711,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 382.096188194,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 385.49218318,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 385.500022406,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 389.034538908,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 389.0429271,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 392.422857828,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 392.430814094,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 395.53690346,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    },
+    {
+      "at_seconds": 395.545984365,
+      "what": "backpressure on, 200 waiting: reading from the stream stops"
+    },
+    {
+      "at_seconds": 399.054530481,
+      "what": "backpressure off, 50 waiting: reading resumes"
+    }
+  ],
+  "aggregate": {
+    "total_events": 65131,
+    "by_type": {
+      "inventory_reserved": 17549,
+      "order_placed": 25708,
+      "payment_confirmed": 21874
+    },
+    "by_country": {
+      "AR": 12824,
+      "CL": 13541,
+      "CO": 12785,
+      "MX": 12968,
+      "PE": 13013
+    },
+    "by_country_and_type": {
+      "AR": {
+        "inventory_reserved": 3430,
+        "order_placed": 5067,
+        "payment_confirmed": 4327
+      },
+      "CL": {
+        "inventory_reserved": 3657,
+        "order_placed": 5358,
+        "payment_confirmed": 4526
+      },
+      "CO": {
+        "inventory_reserved": 3423,
+        "order_placed": 5073,
+        "payment_confirmed": 4289
+      },
+      "MX": {
+        "inventory_reserved": 3533,
+        "order_placed": 5093,
+        "payment_confirmed": 4342
+      },
+      "PE": {
+        "inventory_reserved": 3506,
+        "order_placed": 5117,
+        "payment_confirmed": 4390
+      }
+    },
+    "amount_cents_by_country_and_type": {
+      "AR": {
+        "inventory_reserved": 0,
+        "order_placed": 31229550,
+        "payment_confirmed": 26720602
+      },
+      "CL": {
+        "inventory_reserved": 0,
+        "order_placed": 32552038,
+        "payment_confirmed": 27827382
+      },
+      "CO": {
+        "inventory_reserved": 0,
+        "order_placed": 31808553,
+        "payment_confirmed": 27105751
+      },
+      "MX": {
+        "inventory_reserved": 0,
+        "order_placed": 32075147,
+        "payment_confirmed": 27345988
+      },
+      "PE": {
+        "inventory_reserved": 0,
+        "order_placed": 31879992,
+        "payment_confirmed": 26879397
+      }
+    },
+    "amount_usd_by_type": {
+      "inventory_reserved": 0,
+      "order_placed": 1595452.8,
+      "payment_confirmed": 1358791.2
+    }
+  }
+}

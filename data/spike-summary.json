@@ -1,0 +1,990 @@
+{
+  "machines": [
+    "AMD Ryzen 5 5600G (6c/12t), 7.7 GiB RAM, WSL2 Ubuntu 24.04"
+  ],
+  "runs": 10,
+  "runs_that_failed_a_check": 0,
+  "scenarios": [
+    {
+      "scenario": "spike",
+      "schedule": "43:1m,430:2m,43:5m",
+      "runs": 5,
+      "runs_that_passed_every_check": 5,
+      "lines_sent": 67080,
+      "expected_unique_events": 65131,
+      "expected_reservations": 17549,
+      "median_and_range_across_runs": [
+        {
+          "metric": "unique events aggregated",
+          "median": 65131,
+          "min": 65131,
+          "max": 65131
+        },
+        {
+          "metric": "duplicates discarded",
+          "median": 1949,
+          "min": 1949,
+          "max": 1949
+        },
+        {
+          "metric": "reservations verified",
+          "median": 17549,
+          "min": 17549,
+          "max": 17549
+        },
+        {
+          "metric": "inventory calls that failed",
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        {
+          "metric": "inventory calls the breaker rejected",
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        {
+          "metric": "times the breaker opened",
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        {
+          "metric": "seconds the breaker was open",
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        {
+          "metric": "times backpressure engaged",
+          "median": 99,
+          "min": 99,
+          "max": 99
+        },
+        {
+          "metric": "seconds backpressure was engaged",
+          "median": 334.433042483,
+          "min": 333.437400156,
+          "max": 337.362153281
+        },
+        {
+          "metric": "deepest wait buffer",
+          "median": 226,
+          "min": 226,
+          "max": 231
+        },
+        {
+          "metric": "end to end latency p50, seconds",
+          "median": 74.176722221,
+          "min": 73.424557877,
+          "max": 75.186208347
+        },
+        {
+          "metric": "end to end latency p95, seconds",
+          "median": 157.15297011299998,
+          "min": 156.208414348,
+          "max": 160.244292013
+        },
+        {
+          "metric": "end to end latency max, seconds",
+          "median": 168.60244464299998,
+          "min": 167.568574837,
+          "max": 171.562500384
+        },
+        {
+          "metric": "publish to verified p95, seconds",
+          "median": 159.234615701,
+          "min": 158.271390166,
+          "max": 162.338666555
+        },
+        {
+          "metric": "seconds from first to last event processed",
+          "median": 479.977138702,
+          "min": 479.976081799,
+          "max": 479.978744274
+        },
+        {
+          "metric": "stream reads redis left unanswered",
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        {
+          "metric": "segment 1 achieved rate, target 43/s",
+          "median": 42.99971850363497,
+          "min": 42.99951063860879,
+          "max": 43.000040878816684
+        },
+        {
+          "metric": "segment 1 worst lateness, ms",
+          "median": 1.419949,
+          "min": 1.186569,
+          "max": 7.730278
+        },
+        {
+          "metric": "segment 2 achieved rate, target 430/s",
+          "median": 429.9989463123283,
+          "min": 429.99645617144387,
+          "max": 430.00188780078963
+        },
+        {
+          "metric": "segment 2 worst lateness, ms",
+          "median": 7.169138,
+          "min": 1.6537,
+          "max": 13.151381
+        },
+        {
+          "metric": "segment 3 achieved rate, target 43/s",
+          "median": 42.99993208294238,
+          "min": 42.99985669875557,
+          "max": 42.999986712554076
+        },
+        {
+          "metric": "segment 3 worst lateness, ms",
+          "median": 2.154199,
+          "min": 1.966886,
+          "max": 340.907017
+        }
+      ],
+      "runs_detail": [
+        {
+          "run": 1,
+          "passed_every_check": true,
+          "checks": [
+            {
+              "check": "the producer published every line of the schedule",
+              "ok": true,
+              "detail": "published 67080 of 67080 planned, the script counted 67080 lines, exit status 0"
+            },
+            {
+              "check": "the spike held ten times the normal rate for at least two minutes",
+              "ok": true,
+              "detail": "normal 43/s, spike 430/s for 120s"
+            },
+            {
+              "check": "every segment kept its rate within 0.5%",
+              "ok": true,
+              "detail": "the worst segment was 0.001% off its rate"
+            },
+            {
+              "check": "the consumer finished cleanly with nothing left in its hands",
+              "ok": true,
+              "detail": "exit status 0, 0 read but not aggregated, 0 still in the wait buffer"
+            },
+            {
+              "check": "every line sent was consumed",
+              "ok": true,
+              "detail": "consumed 67080 of 67080"
+            },
+            {
+              "check": "the unique events aggregated equal the count taken outside the system",
+              "ok": true,
+              "detail": "aggregated 65131, expected 65131"
+            },
+            {
+              "check": "the duplicates discarded account for every other line",
+              "ok": true,
+              "detail": "discarded 1949, the lines hold 1949"
+            },
+            {
+              "check": "every reservation was verified against the inventory service",
+              "ok": true,
+              "detail": "verified 17549, expected 17549"
+            },
+            {
+              "check": "redis holds every line and none is unacknowledged",
+              "ok": true,
+              "detail": "stream length 67080, pending 0"
+            },
+            {
+              "check": "the service counted exactly the calls that were made to it",
+              "ok": true,
+              "detail": "the service counted 17549: 17549 from the consumer plus 0 from the outside client make 17549"
+            },
+            {
+              "check": "the wait buffer stayed inside its bound",
+              "ok": true,
+              "detail": "deepest 226, bound 299"
+            },
+            {
+              "check": "the breaker stayed closed, because nothing outside saturated the service",
+              "ok": true,
+              "detail": "opened 0 times"
+            }
+          ]
+        },
+        {
+          "run": 2,
+          "passed_every_check": true,
+          "checks": [
+            {
+              "check": "the producer published every line of the schedule",
+              "ok": true,
+              "detail": "published 67080 of 67080 planned, the script counted 67080 lines, exit status 0"
+            },
+            {
+              "check": "the spike held ten times the normal rate for at least two minutes",
+              "ok": true,
+              "detail": "normal 43/s, spike 430/s for 120s"
+            },
+            {
+              "check": "every segment kept its rate within 0.5%",
+              "ok": true,
+              "detail": "the worst segment was 0.001% off its rate"
+            },
+            {
+              "check": "the consumer finished cleanly with nothing left in its hands",
+              "ok": true,
+              "detail": "exit status 0, 0 read but not aggregated, 0 still in the wait buffer"
+            },
+            {
+              "check": "every line sent was consumed",
+              "ok": true,
+              "detail": "consumed 67080 of 67080"
+            },
+            {
+              "check": "the unique events aggregated equal the count taken outside the system",
+              "ok": true,
+              "detail": "aggregated 65131, expected 65131"
+            },
+            {
+              "check": "the duplicates discarded account for every other line",
+              "ok": true,
+              "detail": "discarded 1949, the lines hold 1949"
+            },
+            {
+              "check": "every reservation was verified against the inventory service",
+              "ok": true,
+              "detail": "verified 17549, expected 17549"
+            },
+            {
+              "check": "redis holds every line and none is unacknowledged",
+              "ok": true,
+              "detail": "stream length 67080, pending 0"
+            },
+            {
+              "check": "the service counted exactly the calls that were made to it",
+              "ok": true,
+              "detail": "the service counted 17549: 17549 from the consumer plus 0 from the outside client make 17549"
+            },
+            {
+              "check": "the wait buffer stayed inside its bound",
+              "ok": true,
+              "detail": "deepest 226, bound 299"
+            },
+            {
+              "check": "the breaker stayed closed, because nothing outside saturated the service",
+              "ok": true,
+              "detail": "opened 0 times"
+            }
+          ]
+        },
+        {
+          "run": 3,
+          "passed_every_check": true,
+          "checks": [
+            {
+              "check": "the producer published every line of the schedule",
+              "ok": true,
+              "detail": "published 67080 of 67080 planned, the script counted 67080 lines, exit status 0"
+            },
+            {
+              "check": "the spike held ten times the normal rate for at least two minutes",
+              "ok": true,
+              "detail": "normal 43/s, spike 430/s for 120s"
+            },
+            {
+              "check": "every segment kept its rate within 0.5%",
+              "ok": true,
+              "detail": "the worst segment was 0.001% off its rate"
+            },
+            {
+              "check": "the consumer finished cleanly with nothing left in its hands",
+              "ok": true,
+              "detail": "exit status 0, 0 read but not aggregated, 0 still in the wait buffer"
+            },
+            {
+              "check": "every line sent was consumed",
+              "ok": true,
+              "detail": "consumed 67080 of 67080"
+            },
+            {
+              "check": "the unique events aggregated equal the count taken outside the system",
+              "ok": true,
+              "detail": "aggregated 65131, expected 65131"
+            },
+            {
+              "check": "the duplicates discarded account for every other line",
+              "ok": true,
+              "detail": "discarded 1949, the lines hold 1949"
+            },
+            {
+              "check": "every reservation was verified against the inventory service",
+              "ok": true,
+              "detail": "verified 17549, expected 17549"
+            },
+            {
+              "check": "redis holds every line and none is unacknowledged",
+              "ok": true,
+              "detail": "stream length 67080, pending 0"
+            },
+            {
+              "check": "the service counted exactly the calls that were made to it",
+              "ok": true,
+              "detail": "the service counted 17549: 17549 from the consumer plus 0 from the outside client make 17549"
+            },
+            {
+              "check": "the wait buffer stayed inside its bound",
+              "ok": true,
+              "detail": "deepest 226, bound 299"
+            },
+            {
+              "check": "the breaker stayed closed, because nothing outside saturated the service",
+              "ok": true,
+              "detail": "opened 0 times"
+            }
+          ]
+        },
+        {
+          "run": 4,
+          "passed_every_check": true,
+          "checks": [
+            {
+              "check": "the producer published every line of the schedule",
+              "ok": true,
+              "detail": "published 67080 of 67080 planned, the script counted 67080 lines, exit status 0"
+            },
+            {
+              "check": "the spike held ten times the normal rate for at least two minutes",
+              "ok": true,
+              "detail": "normal 43/s, spike 430/s for 120s"
+            },
+            {
+              "check": "every segment kept its rate within 0.5%",
+              "ok": true,
+              "detail": "the worst segment was 0.000% off its rate"
+            },
+            {
+              "check": "the consumer finished cleanly with nothing left in its hands",
+              "ok": true,
+              "detail": "exit status 0, 0 read but not aggregated, 0 still in the wait buffer"
+            },
+            {
+              "check": "every line sent was consumed",
+              "ok": true,
+              "detail": "consumed 67080 of 67080"
+            },
+            {
+              "check": "the unique events aggregated equal the count taken outside the system",
+              "ok": true,
+              "detail": "aggregated 65131, expected 65131"
+            },
+            {
+              "check": "the duplicates discarded account for every other line",
+              "ok": true,
+              "detail": "discarded 1949, the lines hold 1949"
+            },
+            {
+              "check": "every reservation was verified against the inventory service",
+              "ok": true,
+              "detail": "verified 17549, expected 17549"
+            },
+            {
+              "check": "redis holds every line and none is unacknowledged",
+              "ok": true,
+              "detail": "stream length 67080, pending 0"
+            },
+            {
+              "check": "the service counted exactly the calls that were made to it",
+              "ok": true,
+              "detail": "the service counted 17549: 17549 from the consumer plus 0 from the outside client make 17549"
+            },
+            {
+              "check": "the wait buffer stayed inside its bound",
+              "ok": true,
+              "detail": "deepest 227, bound 299"
+            },
+            {
+              "check": "the breaker stayed closed, because nothing outside saturated the service",
+              "ok": true,
+              "detail": "opened 0 times"
+            }
+          ]
+        },
+        {
+          "run": 5,
+          "passed_every_check": true,
+          "checks": [
+            {
+              "check": "the producer published every line of the schedule",
+              "ok": true,
+              "detail": "published 67080 of 67080 planned, the script counted 67080 lines, exit status 0"
+            },
+            {
+              "check": "the spike held ten times the normal rate for at least two minutes",
+              "ok": true,
+              "detail": "normal 43/s, spike 430/s for 120s"
+            },
+            {
+              "check": "every segment kept its rate within 0.5%",
+              "ok": true,
+              "detail": "the worst segment was 0.001% off its rate"
+            },
+            {
+              "check": "the consumer finished cleanly with nothing left in its hands",
+              "ok": true,
+              "detail": "exit status 0, 0 read but not aggregated, 0 still in the wait buffer"
+            },
+            {
+              "check": "every line sent was consumed",
+              "ok": true,
+              "detail": "consumed 67080 of 67080"
+            },
+            {
+              "check": "the unique events aggregated equal the count taken outside the system",
+              "ok": true,
+              "detail": "aggregated 65131, expected 65131"
+            },
+            {
+              "check": "the duplicates discarded account for every other line",
+              "ok": true,
+              "detail": "discarded 1949, the lines hold 1949"
+            },
+            {
+              "check": "every reservation was verified against the inventory service",
+              "ok": true,
+              "detail": "verified 17549, expected 17549"
+            },
+            {
+              "check": "redis holds every line and none is unacknowledged",
+              "ok": true,
+              "detail": "stream length 67080, pending 0"
+            },
+            {
+              "check": "the service counted exactly the calls that were made to it",
+              "ok": true,
+              "detail": "the service counted 17549: 17549 from the consumer plus 0 from the outside client make 17549"
+            },
+            {
+              "check": "the wait buffer stayed inside its bound",
+              "ok": true,
+              "detail": "deepest 231, bound 299"
+            },
+            {
+              "check": "the breaker stayed closed, because nothing outside saturated the service",
+              "ok": true,
+              "detail": "opened 0 times"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "spike-with-outside-load",
+      "schedule": "43:1m,430:2m,43:5m",
+      "runs": 5,
+      "runs_that_passed_every_check": 5,
+      "lines_sent": 67080,
+      "expected_unique_events": 65131,
+      "expected_reservations": 17549,
+      "median_and_range_across_runs": [
+        {
+          "metric": "unique events aggregated",
+          "median": 65131,
+          "min": 65131,
+          "max": 65131
+        },
+        {
+          "metric": "duplicates discarded",
+          "median": 1949,
+          "min": 1949,
+          "max": 1949
+        },
+        {
+          "metric": "reservations verified",
+          "median": 17549,
+          "min": 17549,
+          "max": 17549
+        },
+        {
+          "metric": "inventory calls that failed",
+          "median": 14,
+          "min": 14,
+          "max": 14
+        },
+        {
+          "metric": "inventory calls the breaker rejected",
+          "median": 10,
+          "min": 10,
+          "max": 10
+        },
+        {
+          "metric": "times the breaker opened",
+          "median": 10,
+          "min": 10,
+          "max": 10
+        },
+        {
+          "metric": "seconds the breaker was open",
+          "median": 20.007835283,
+          "min": 20.005367528,
+          "max": 20.008171956
+        },
+        {
+          "metric": "times backpressure engaged",
+          "median": 101,
+          "min": 101,
+          "max": 101
+        },
+        {
+          "metric": "seconds backpressure was engaged",
+          "median": 364.229804093,
+          "min": 363.420453168,
+          "max": 367.101332358
+        },
+        {
+          "metric": "deepest wait buffer",
+          "median": 226,
+          "min": 226,
+          "max": 228
+        },
+        {
+          "metric": "end to end latency p50, seconds",
+          "median": 96.011014866,
+          "min": 95.742457786,
+          "max": 96.961338465
+        },
+        {
+          "metric": "end to end latency p95, seconds",
+          "median": 180.01152263,
+          "min": 179.52027862600002,
+          "max": 181.72816851
+        },
+        {
+          "metric": "end to end latency max, seconds",
+          "median": 191.508035186,
+          "min": 191.01796288,
+          "max": 193.229112922
+        },
+        {
+          "metric": "publish to verified p95, seconds",
+          "median": 182.153575058,
+          "min": 181.556965,
+          "max": 183.813987578
+        },
+        {
+          "metric": "seconds from first to last event processed",
+          "median": 479.977291591,
+          "min": 479.976307873,
+          "max": 479.978010799
+        },
+        {
+          "metric": "stream reads redis left unanswered",
+          "median": 0,
+          "min": 0,
+          "max": 1
+        },
+        {
+          "metric": "segment 1 achieved rate, target 43/s",
+          "median": 42.99967754660186,
+          "min": 42.99916993263609,
+          "max": 43.00033062012175
+        },
+        {
+          "metric": "segment 1 worst lateness, ms",
+          "median": 1.277676,
+          "min": 1.17384,
+          "max": 2.082267
+        },
+        {
+          "metric": "segment 2 achieved rate, target 430/s",
+          "median": 430.00221865594443,
+          "min": 430.00026090629797,
+          "max": 430.00566904160235
+        },
+        {
+          "metric": "segment 2 worst lateness, ms",
+          "median": 1.670205,
+          "min": 1.353163,
+          "max": 15.329825
+        },
+        {
+          "metric": "segment 3 achieved rate, target 43/s",
+          "median": 43.000003742157084,
+          "min": 42.99991266915752,
+          "max": 43.00001385668863
+        },
+        {
+          "metric": "segment 3 worst lateness, ms",
+          "median": 2.132141,
+          "min": 1.973569,
+          "max": 2.8133
+        },
+        {
+          "metric": "outside client requests that failed, %",
+          "median": 26.566666666666666,
+          "min": 25.5,
+          "max": 27.466666666666665
+        }
+      ],
+      "runs_detail": [
+        {
+          "run": 1,
+          "passed_every_check": true,
+          "checks": [
+            {
+              "check": "the producer published every line of the schedule",
+              "ok": true,
+              "detail": "published 67080 of 67080 planned, the script counted 67080 lines, exit status 0"
+            },
+            {
+              "check": "the spike held ten times the normal rate for at least two minutes",
+              "ok": true,
+              "detail": "normal 43/s, spike 430/s for 120s"
+            },
+            {
+              "check": "every segment kept its rate within 0.5%",
+              "ok": true,
+              "detail": "the worst segment was 0.001% off its rate"
+            },
+            {
+              "check": "the consumer finished cleanly with nothing left in its hands",
+              "ok": true,
+              "detail": "exit status 0, 0 read but not aggregated, 0 still in the wait buffer"
+            },
+            {
+              "check": "every line sent was consumed",
+              "ok": true,
+              "detail": "consumed 67080 of 67080"
+            },
+            {
+              "check": "the unique events aggregated equal the count taken outside the system",
+              "ok": true,
+              "detail": "aggregated 65131, expected 65131"
+            },
+            {
+              "check": "the duplicates discarded account for every other line",
+              "ok": true,
+              "detail": "discarded 1949, the lines hold 1949"
+            },
+            {
+              "check": "every reservation was verified against the inventory service",
+              "ok": true,
+              "detail": "verified 17549, expected 17549"
+            },
+            {
+              "check": "redis holds every line and none is unacknowledged",
+              "ok": true,
+              "detail": "stream length 67080, pending 0"
+            },
+            {
+              "check": "the service counted exactly the calls that were made to it",
+              "ok": true,
+              "detail": "the service counted 20563: 17563 from the consumer plus 3000 from the outside client make 20563"
+            },
+            {
+              "check": "the wait buffer stayed inside its bound",
+              "ok": true,
+              "detail": "deepest 227, bound 299"
+            },
+            {
+              "check": "the outside client did saturate the service",
+              "ok": true,
+              "detail": "exit status 0, 3000 requests at 150/s, 27.5% of them failed"
+            },
+            {
+              "check": "the breaker opened, and ended the run closed again",
+              "ok": true,
+              "detail": "opened 10 times, last transition \"breaker half-open -\u003e closed\""
+            }
+          ]
+        },
+        {
+          "run": 2,
+          "passed_every_check": true,
+          "checks": [
+            {
+              "check": "the producer published every line of the schedule",
+              "ok": true,
+              "detail": "published 67080 of 67080 planned, the script counted 67080 lines, exit status 0"
+            },
+            {
+              "check": "the spike held ten times the normal rate for at least two minutes",
+              "ok": true,
+              "detail": "normal 43/s, spike 430/s for 120s"
+            },
+            {
+              "check": "every segment kept its rate within 0.5%",
+              "ok": true,
+              "detail": "the worst segment was 0.001% off its rate"
+            },
+            {
+              "check": "the consumer finished cleanly with nothing left in its hands",
+              "ok": true,
+              "detail": "exit status 0, 0 read but not aggregated, 0 still in the wait buffer"
+            },
+            {
+              "check": "every line sent was consumed",
+              "ok": true,
+              "detail": "consumed 67080 of 67080"
+            },
+            {
+              "check": "the unique events aggregated equal the count taken outside the system",
+              "ok": true,
+              "detail": "aggregated 65131, expected 65131"
+            },
+            {
+              "check": "the duplicates discarded account for every other line",
+              "ok": true,
+              "detail": "discarded 1949, the lines hold 1949"
+            },
+            {
+              "check": "every reservation was verified against the inventory service",
+              "ok": true,
+              "detail": "verified 17549, expected 17549"
+            },
+            {
+              "check": "redis holds every line and none is unacknowledged",
+              "ok": true,
+              "detail": "stream length 67080, pending 0"
+            },
+            {
+              "check": "the service counted exactly the calls that were made to it",
+              "ok": true,
+              "detail": "the service counted 20563: 17563 from the consumer plus 3000 from the outside client make 20563"
+            },
+            {
+              "check": "the wait buffer stayed inside its bound",
+              "ok": true,
+              "detail": "deepest 226, bound 299"
+            },
+            {
+              "check": "the outside client did saturate the service",
+              "ok": true,
+              "detail": "exit status 0, 3000 requests at 150/s, 26.6% of them failed"
+            },
+            {
+              "check": "the breaker opened, and ended the run closed again",
+              "ok": true,
+              "detail": "opened 10 times, last transition \"breaker half-open -\u003e closed\""
+            }
+          ]
+        },
+        {
+          "run": 3,
+          "passed_every_check": true,
+          "checks": [
+            {
+              "check": "the producer published every line of the schedule",
+              "ok": true,
+              "detail": "published 67080 of 67080 planned, the script counted 67080 lines, exit status 0"
+            },
+            {
+              "check": "the spike held ten times the normal rate for at least two minutes",
+              "ok": true,
+              "detail": "normal 43/s, spike 430/s for 120s"
+            },
+            {
+              "check": "every segment kept its rate within 0.5%",
+              "ok": true,
+              "detail": "the worst segment was 0.001% off its rate"
+            },
+            {
+              "check": "the consumer finished cleanly with nothing left in its hands",
+              "ok": true,
+              "detail": "exit status 0, 0 read but not aggregated, 0 still in the wait buffer"
+            },
+            {
+              "check": "every line sent was consumed",
+              "ok": true,
+              "detail": "consumed 67080 of 67080"
+            },
+            {
+              "check": "the unique events aggregated equal the count taken outside the system",
+              "ok": true,
+              "detail": "aggregated 65131, expected 65131"
+            },
+            {
+              "check": "the duplicates discarded account for every other line",
+              "ok": true,
+              "detail": "discarded 1949, the lines hold 1949"
+            },
+            {
+              "check": "every reservation was verified against the inventory service",
+              "ok": true,
+              "detail": "verified 17549, expected 17549"
+            },
+            {
+              "check": "redis holds every line and none is unacknowledged",
+              "ok": true,
+              "detail": "stream length 67080, pending 0"
+            },
+            {
+              "check": "the service counted exactly the calls that were made to it",
+              "ok": true,
+              "detail": "the service counted 20563: 17563 from the consumer plus 3000 from the outside client make 20563"
+            },
+            {
+              "check": "the wait buffer stayed inside its bound",
+              "ok": true,
+              "detail": "deepest 226, bound 299"
+            },
+            {
+              "check": "the outside client did saturate the service",
+              "ok": true,
+              "detail": "exit status 0, 3000 requests at 150/s, 26.8% of them failed"
+            },
+            {
+              "check": "the breaker opened, and ended the run closed again",
+              "ok": true,
+              "detail": "opened 10 times, last transition \"breaker half-open -\u003e closed\""
+            }
+          ]
+        },
+        {
+          "run": 4,
+          "passed_every_check": true,
+          "checks": [
+            {
+              "check": "the producer published every line of the schedule",
+              "ok": true,
+              "detail": "published 67080 of 67080 planned, the script counted 67080 lines, exit status 0"
+            },
+            {
+              "check": "the spike held ten times the normal rate for at least two minutes",
+              "ok": true,
+              "detail": "normal 43/s, spike 430/s for 120s"
+            },
+            {
+              "check": "every segment kept its rate within 0.5%",
+              "ok": true,
+              "detail": "the worst segment was 0.001% off its rate"
+            },
+            {
+              "check": "the consumer finished cleanly with nothing left in its hands",
+              "ok": true,
+              "detail": "exit status 0, 0 read but not aggregated, 0 still in the wait buffer"
+            },
+            {
+              "check": "every line sent was consumed",
+              "ok": true,
+              "detail": "consumed 67080 of 67080"
+            },
+            {
+              "check": "the unique events aggregated equal the count taken outside the system",
+              "ok": true,
+              "detail": "aggregated 65131, expected 65131"
+            },
+            {
+              "check": "the duplicates discarded account for every other line",
+              "ok": true,
+              "detail": "discarded 1949, the lines hold 1949"
+            },
+            {
+              "check": "every reservation was verified against the inventory service",
+              "ok": true,
+              "detail": "verified 17549, expected 17549"
+            },
+            {
+              "check": "redis holds every line and none is unacknowledged",
+              "ok": true,
+              "detail": "stream length 67080, pending 0"
+            },
+            {
+              "check": "the service counted exactly the calls that were made to it",
+              "ok": true,
+              "detail": "the service counted 20563: 17563 from the consumer plus 3000 from the outside client make 20563"
+            },
+            {
+              "check": "the wait buffer stayed inside its bound",
+              "ok": true,
+              "detail": "deepest 228, bound 299"
+            },
+            {
+              "check": "the outside client did saturate the service",
+              "ok": true,
+              "detail": "exit status 0, 3000 requests at 150/s, 25.6% of them failed"
+            },
+            {
+              "check": "the breaker opened, and ended the run closed again",
+              "ok": true,
+              "detail": "opened 10 times, last transition \"breaker half-open -\u003e closed\""
+            }
+          ]
+        },
+        {
+          "run": 5,
+          "passed_every_check": true,
+          "checks": [
+            {
+              "check": "the producer published every line of the schedule",
+              "ok": true,
+              "detail": "published 67080 of 67080 planned, the script counted 67080 lines, exit status 0"
+            },
+            {
+              "check": "the spike held ten times the normal rate for at least two minutes",
+              "ok": true,
+              "detail": "normal 43/s, spike 430/s for 120s"
+            },
+            {
+              "check": "every segment kept its rate within 0.5%",
+              "ok": true,
+              "detail": "the worst segment was 0.002% off its rate"
+            },
+            {
+              "check": "the consumer finished cleanly with nothing left in its hands",
+              "ok": true,
+              "detail": "exit status 0, 0 read but not aggregated, 0 still in the wait buffer"
+            },
+            {
+              "check": "every line sent was consumed",
+              "ok": true,
+              "detail": "consumed 67080 of 67080"
+            },
+            {
+              "check": "the unique events aggregated equal the count taken outside the system",
+              "ok": true,
+              "detail": "aggregated 65131, expected 65131"
+            },
+            {
+              "check": "the duplicates discarded account for every other line",
+              "ok": true,
+              "detail": "discarded 1949, the lines hold 1949"
+            },
+            {
+              "check": "every reservation was verified against the inventory service",
+              "ok": true,
+              "detail": "verified 17549, expected 17549"
+            },
+            {
+              "check": "redis holds every line and none is unacknowledged",
+              "ok": true,
+              "detail": "stream length 67080, pending 0"
+            },
+            {
+              "check": "the service counted exactly the calls that were made to it",
+              "ok": true,
+              "detail": "the service counted 20563: 17563 from the consumer plus 3000 from the outside client make 20563"
+            },
+            {
+              "check": "the wait buffer stayed inside its bound",
+              "ok": true,
+              "detail": "deepest 226, bound 299"
+            },
+            {
+              "check": "the outside client did saturate the service",
+              "ok": true,
+              "detail": "exit status 0, 3000 requests at 150/s, 25.5% of them failed"
+            },
+            {
+              "check": "the breaker opened, and ended the run closed again",
+              "ok": true,
+              "detail": "opened 10 times, last transition \"breaker half-open -\u003e closed\""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

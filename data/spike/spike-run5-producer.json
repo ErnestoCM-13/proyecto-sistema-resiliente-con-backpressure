@@ -1,0 +1,44 @@
+{
+  "file": "data/eventos_hotsale.jsonl",
+  "stream": "hotsale:spike",
+  "schedule": "43/s for 1m0s, then 430/s for 2m0s, then 43/s for 5m0s",
+  "planned_events": 67080,
+  "published_events": 67080,
+  "refused_as_already_in_the_stream": 0,
+  "duration_seconds": 479.977826561,
+  "segments": [
+    {
+      "segment": 1,
+      "target_rate_per_second": 43,
+      "planned_seconds": 60,
+      "planned_events": 2580,
+      "published_events": 2580,
+      "first_event_at_seconds": 0.000583312,
+      "last_event_at_seconds": 59.9772903,
+      "achieved_rate_per_second": 43.00002666895334,
+      "max_lateness_ms": 1.419949
+    },
+    {
+      "segment": 2,
+      "target_rate_per_second": 430,
+      "planned_seconds": 120,
+      "planned_events": 51600,
+      "published_events": 51600,
+      "first_event_at_seconds": 60.000091079,
+      "last_event_at_seconds": 179.998754462,
+      "achieved_rate_per_second": 429.99645617144387,
+      "max_lateness_ms": 10.886594
+    },
+    {
+      "segment": 3,
+      "target_rate_per_second": 43,
+      "planned_seconds": 300,
+      "planned_events": 12900,
+      "published_events": 12900,
+      "first_event_at_seconds": 180.000193309,
+      "last_event_at_seconds": 479.977364157,
+      "achieved_rate_per_second": 42.99993884046593,
+      "max_lateness_ms": 1.966886
+    }
+  ]
+}
