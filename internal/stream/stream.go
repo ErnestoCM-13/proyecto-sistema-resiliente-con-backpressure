@@ -5,6 +5,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"net"
 	"slices"
 	"strconv"
 	"strings"
@@ -18,7 +19,10 @@ const (
 	FieldPubNS   = "t"
 )
 
-var ErrNoMessages = errors.New("no messages within the block timeout")
+var (
+	ErrNoMessages   = errors.New("no messages within the block timeout")
+	ErrBlockOverran = errors.New("redis did not answer the blocking read, not even to say the block had ended")
+)
 
 func EntryID(line int64) string {
 	return "1-" + strconv.FormatInt(line, 10)
@@ -153,10 +157,7 @@ func (r *Reader) Read(ctx context.Context) ([]Message, error) {
 		Block:    r.block,
 	}).Result()
 	if err != nil {
-		if errors.Is(err, redis.Nil) {
-			return nil, ErrNoMessages
-		}
-		return nil, fmt.Errorf("xreadgroup: %w", err)
+		return nil, classifyReadError(ctx, err)
 	}
 
 	var messages []Message
@@ -170,6 +171,17 @@ func (r *Reader) Read(ctx context.Context) ([]Message, error) {
 		}
 	}
 	return messages, nil
+}
+
+func classifyReadError(ctx context.Context, err error) error {
+	if errors.Is(err, redis.Nil) {
+		return ErrNoMessages
+	}
+	var netErr net.Error
+	if ctx.Err() == nil && errors.As(err, &netErr) && netErr.Timeout() {
+		return fmt.Errorf("xreadgroup: %w: %w", ErrBlockOverran, err)
+	}
+	return fmt.Errorf("xreadgroup: %w", err)
 }
 
 func (r *Reader) Claim(ctx context.Context, minIdle time.Duration, count int64) ([]Message, error) {

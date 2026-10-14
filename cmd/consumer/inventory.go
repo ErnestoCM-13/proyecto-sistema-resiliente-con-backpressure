@@ -28,6 +28,13 @@ type checker interface {
 	Stats() breaker.Stats
 }
 
+type messageSource interface {
+	Read(ctx context.Context) ([]stream.Message, error)
+	Claim(ctx context.Context, minIdle time.Duration, count int64) ([]stream.Message, error)
+	Pending(ctx context.Context) (int64, error)
+	Ack(ctx context.Context, ids []string) error
+}
+
 type pendingCheck struct {
 	id    string
 	ev    event.Event
@@ -35,13 +42,13 @@ type pendingCheck struct {
 }
 
 type pipeline struct {
-	reader  *stream.Reader
+	reader  messageSource
 	checker checker
 	buffer  *backpressure.Buffer[pendingCheck]
 	log     *timeline
 }
 
-func newPipeline(reader *stream.Reader, cfg config, log *timeline) (*pipeline, error) {
+func newPipeline(reader messageSource, cfg config, log *timeline) (*pipeline, error) {
 	client, err := inventory.NewClient(cfg.inventoryURL, cfg.checkTimeout)
 	if err != nil {
 		return nil, fmt.Errorf("inventory client: %w", err)
@@ -208,7 +215,7 @@ func work(ctx context.Context, p *pipeline, state *processor) error {
 	}
 }
 
-func ack(ctx context.Context, reader *stream.Reader, ids []string) error {
+func ack(ctx context.Context, reader messageSource, ids []string) error {
 	ackCtx, cancel := context.WithTimeout(context.WithoutCancel(ctx), ackTimeout)
 	defer cancel()
 	return reader.Ack(ackCtx, ids)

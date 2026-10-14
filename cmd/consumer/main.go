@@ -25,8 +25,9 @@ import (
 )
 
 const (
-	progressEvery = 250_000
-	readBlock     = 2 * time.Second
+	progressEvery   = 250_000
+	readBlock       = 2 * time.Second
+	maxReadOverruns = 3
 )
 
 type config struct {
@@ -112,6 +113,7 @@ type Report struct {
 	DuplicatesDiscarded int64              `json:"duplicates_discarded"`
 	ParseErrors         int64              `json:"parse_errors"`
 	ParseErrorSamples   []string           `json:"parse_error_samples"`
+	ReadOverruns        int64              `json:"stream_reads_redis_left_unanswered"`
 	DurationSeconds     float64            `json:"duration_seconds"`
 	EventsPerSecond     float64            `json:"events_per_second"`
 	LatencyMs           Dist               `json:"end_to_end_latency_ms"`
@@ -222,6 +224,7 @@ func consume(ctx context.Context, p *pipeline, cfg config) (*Report, error) {
 func read(ctx context.Context, p *pipeline, cfg config, window *dedup.Window, state *processor, rep *Report) error {
 	ids := make([]string, 0, cfg.readCount)
 	var lastMessage time.Time
+	overruns := 0
 
 	for {
 		if err := p.buffer.WaitForRoom(ctx); err != nil {
@@ -229,11 +232,18 @@ func read(ctx context.Context, p *pipeline, cfg config, window *dedup.Window, st
 		}
 
 		messages, err := p.reader.Read(ctx)
-		if err != nil {
-			if !errors.Is(err, stream.ErrNoMessages) {
-				return err
+		switch {
+		case err == nil:
+			overruns = 0
+		case errors.Is(err, stream.ErrBlockOverran):
+			overruns++
+			rep.ReadOverruns++
+			p.log.add(time.Now(), "redis left a stream read unanswered; reading again")
+			if overruns >= maxReadOverruns {
+				return fmt.Errorf("%d stream reads in a row: %w", overruns, err)
 			}
-			messages = nil
+		case errors.Is(err, stream.ErrNoMessages):
+			overruns = 0
 			if state.idle() {
 				messages, err = p.reader.Claim(ctx, cfg.claimMinIdle, cfg.readCount)
 				if err != nil {
@@ -241,6 +251,8 @@ func read(ctx context.Context, p *pipeline, cfg config, window *dedup.Window, st
 				}
 				rep.Claimed += int64(len(messages))
 			}
+		default:
+			return err
 		}
 
 		if len(messages) == 0 {
@@ -392,6 +404,9 @@ func printReport(rep *Report) {
 	fmt.Printf("parse errors    %d\n", rep.ParseErrors)
 	for _, s := range rep.ParseErrorSamples {
 		fmt.Printf("                %s\n", s)
+	}
+	if rep.ReadOverruns > 0 {
+		fmt.Printf("stream reads    %d got no answer from redis in time and were made again\n", rep.ReadOverruns)
 	}
 	fmt.Printf("latency ms      min %.2f  p50 %.2f  p95 %.2f  p99 %.2f  max %.2f\n",
 		rep.LatencyMs.Min, rep.LatencyMs.P50, rep.LatencyMs.P95, rep.LatencyMs.P99, rep.LatencyMs.Max)
